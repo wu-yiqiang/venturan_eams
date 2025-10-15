@@ -2,14 +2,10 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"net/http"
-	"time"
+	"venturan/app/controllers/app"
 )
 
 // SetApiGroupRoutes 定义 api 分组路由
 func SetApiGroupRoutes(router *gin.RouterGroup) {
-	router.GET("/test", func(c *gin.Context) {
-		time.Sleep(5 * time.Second)
-		c.String(http.StatusOK, "success")
-	})
+	router.POST("/user/register", app.Register)
 }
