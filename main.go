@@ -1,8 +1,6 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"net/http"
 	"venturan/bootstrap"
 	"venturan/global"
 )
@@ -22,10 +20,6 @@ func main() {
 			db.Close()
 		}
 	}()
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.String(http.StatusOK, "pong")
-	})
-	// 启动服务器
-	r.Run(":" + global.App.Config.App.Port)
+	// 启动服务
+	bootstrap.RunServer()
 }
