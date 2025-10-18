@@ -1,7 +1,6 @@
 package models
 
 import (
-	"gorm.io/gorm"
 	"time"
 )
 
@@ -23,5 +22,5 @@ type CreateBy struct {
 
 // 软删除
 type IsDeleted struct {
-	IsDeleted gorm.DeletedAt `json:"is_deleted" gorm:"index"`
+	IsDeleted bool `json:"is_deleted" gorm:"default: false;index"`
 }

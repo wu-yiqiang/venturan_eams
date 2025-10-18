@@ -23,25 +23,29 @@ func Success(c *gin.Context, data interface{}) {
 }
 
 // Fail 响应失败 code 不为 200 表示失败
-func Fail(c *gin.Context, errorCode int, msg string) {
+func Fail(c *gin.Context, errorType Response) {
 	c.JSON(http.StatusOK, Response{
-		errorCode,
-		nil,
-		msg,
+		errorType.Code,
+		errorType.Data,
+		errorType.Msg,
 	})
+}
+
+// ValidateFail 请求参数验证失败
+func ValidateFail(c *gin.Context, errorType interface{}) {
+	// Fail(c, errorType)
 }
 
 // FailByError 失败响应 返回自定义错误的错误码、错误信息
 func FailByError(c *gin.Context, error global.CustomError) {
-	Fail(c, error.ErrorCode, error.ErrorMsg)
-}
-
-// ValidateFail 请求参数验证失败
-func ValidateFail(c *gin.Context, msg string) {
-	Fail(c, global.Errors.ValidateError.ErrorCode, msg)
+	// Fail(c, error.ErrorCode, error.ErrorMsg)
 }
 
 // BusinessFail 业务逻辑失败
 func BusinessFail(c *gin.Context, msg string) {
-	Fail(c, global.Errors.BusinessError.ErrorCode, msg)
+	// Fail(c, global.Errors.BusinessError.ErrorCode, msg)
+}
+
+func TokenFail(c *gin.Context) {
+	// FailByError(c, global.Errors.TokenError)
 }

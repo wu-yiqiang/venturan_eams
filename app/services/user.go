@@ -2,9 +2,11 @@ package services
 
 import (
 	"errors"
+	"strconv"
 	"venturan/app/common/request"
 	"venturan/app/models"
 	"venturan/global"
+	"venturan/global/serviceErrors"
 	"venturan/utils"
 )
 
@@ -15,12 +17,32 @@ var UserService = new(userService)
 
 // Register 注册
 func (userService *userService) Register(params request.Register) (err error, user models.User) {
-	var result = global.App.DB.Where("mobile = ?", params.Mobile).Select("id").First(&models.User{})
+	var result = global.App.DB.Where("email = ?", params.Email).Select("id").First(&models.User{})
 	if result.RowsAffected != 0 {
-		err = errors.New("手机号已存在")
+		err = errors.New(serviceErrors.EmailAddIsExisted.Msg)
 		return
 	}
-	user = models.User{Name: params.Name, Mobile: params.Mobile, Password: utils.BcryptMake([]byte(params.Password))}
+	user = models.User{Email: params.Email, Name: params.Name, Mobile: params.Mobile, Avatar: params.Avatar, EmployTime: params.EmployTime, NickName: params.NickName, Password: utils.BcryptMake([]byte(params.Password))}
 	err = global.App.DB.Create(&user).Error
+	if err != nil {
+		err = errors.New(serviceErrors.EmailAddIsExisted.Msg)
+	}
+	return
+}
+
+func (userService *userService) Login(params request.Login) (err error, user *models.User) {
+	err = global.App.DB.Where("email = ?", params.Email).First(&user).Error
+	if err != nil || !utils.BcryptMakeCheck([]byte(params.Password), user.Password) {
+		err = errors.New(serviceErrors.UserIsNotExistOrPasswordError.Msg)
+	}
+	return
+}
+
+func (userService *userService) GetUserInfo(id string) (err error, user models.User) {
+	intId, err := strconv.Atoi(id)
+	err = global.App.DB.First(&user, intId).Error
+	if err != nil {
+		err = errors.New("数据不存在")
+	}
 	return
 }
