@@ -7,7 +7,7 @@ import (
 type Register struct {
 	Name       string `form:"name" json:"name" binding:"required"`
 	NickName   string `form:"nick_name" json:"nick_name"`
-	Email      string `form:"email" json:"email" binding:"required"`
+	Email      string `form:"email" json:"email" binding:"required,email"`
 	Avatar     string `form:"avatar" json:"avatar"`
 	Mobile     string `form:"mobile" json:"mobile"`
 	Password   string `form:"password" json:"password" binding:"required"`

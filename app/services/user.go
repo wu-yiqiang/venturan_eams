@@ -25,7 +25,7 @@ func (userService *userService) Register(params request.Register) (err error, us
 	user = models.User{Email: params.Email, Name: params.Name, Mobile: params.Mobile, Avatar: params.Avatar, EmployTime: params.EmployTime, NickName: params.NickName, Password: utils.BcryptMake([]byte(params.Password))}
 	err = global.App.DB.Create(&user).Error
 	if err != nil {
-		err = errors.New(serviceErrors.EmailAddIsExisted.Msg)
+		err = errors.New(serviceErrors.UserCreateFailed.Msg)
 	}
 	return
 }

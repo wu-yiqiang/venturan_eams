@@ -1429,3 +1429,1014 @@
 
 2025/10/18 22:04:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
 [0.997ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/18 22:30:44 /Users/atlas/go/src/venturan_eams/app/services/user.go:20 record not found
+[1.110ms] [rows:0] SELECT `id` FROM `users` WHERE email = 'sutter.wuitforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:30:44 /Users/atlas/go/src/venturan_eams/app/services/user.go:26
+[1.897ms] [rows:1] INSERT INTO `users` (`name`,`nick_name`,`email`,`avatar`,`mobile`,`password`,`employ_time`,`created_at`,`updated_at`,`is_deleted`) VALUES ('sutter','','sutter.wuitforce-tech.com','','','$2a$04$AzQL/rO.8G6Bkbr6XL9QRO5Ul802NKoVMigwEaIUxArQdRVChm1JO','','2025-10-18 22:30:44.874','2025-10-18 22:30:44.874',false)
+
+2025/10/18 22:30:50 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[1.599ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.wuitforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:30:50 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[0.758ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.wuitforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:30:51 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[1.972ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.wuitforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:30:51 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[1.313ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.wuitforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:30:52 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[1.494ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.wuitforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:30:53 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[1.712ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.wuitforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:30:53 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[0.890ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.wuitforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.247ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.217ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.781ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.176ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.734ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.533ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.667ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.299ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.031ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.614ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.264ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.118ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.205ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.193ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.604ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:30:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.490ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/18 22:30:59 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[3.047ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.wuitforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.200ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.266ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.624ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.265ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.994ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.938ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.857ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.140ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.578ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.309ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.150ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.666ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.985ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.162ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.624ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:47:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.010ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/18 22:47:41 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[2.131ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.wuitforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:48:59 /Users/atlas/go/src/venturan_eams/app/services/user.go:20 record not found
+[3.065ms] [rows:0] SELECT `id` FROM `users` WHERE email = 'sutter.witforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:48:59 /Users/atlas/go/src/venturan_eams/app/services/user.go:26
+[6.053ms] [rows:1] INSERT INTO `users` (`name`,`nick_name`,`email`,`avatar`,`mobile`,`password`,`employ_time`,`created_at`,`updated_at`,`is_deleted`) VALUES ('sutter','','sutter.witforce-tech.com','','','$2a$04$yT.9hOEB19.5ZQf6RKX04OiTOLnG5haiNWylinoh37gFHFOeFXQSu','','2025-10-18 22:48:59.344','2025-10-18 22:48:59.344',false)
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.178ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.130ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.523ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.227ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.660ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.821ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.775ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.191ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.772ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.127ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.248ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.612ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.885ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.137ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.463ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:53:07 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.791ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.163ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.143ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.850ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.239ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.045ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.506ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.547ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.146ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.583ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.183ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.151ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.553ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.123ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.148ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.418ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:55:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.105ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/18 22:55:56 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[2.433ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.witforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.207ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.411ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.844ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.274ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.881ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.595ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.033ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.144ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.557ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.086ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.192ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.601ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.125ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.158ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.557ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 22:56:06 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.031ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/18 22:56:07 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[2.181ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.witforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 22:56:08 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[1.306ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.witforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 23:00:24 /Users/atlas/go/src/venturan_eams/app/services/user.go:20 record not found
+[1.621ms] [rows:0] SELECT `id` FROM `users` WHERE email = 'sutter.w22itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/18 23:00:24 /Users/atlas/go/src/venturan_eams/app/services/user.go:26
+[4.059ms] [rows:1] INSERT INTO `users` (`name`,`nick_name`,`email`,`avatar`,`mobile`,`password`,`employ_time`,`created_at`,`updated_at`,`is_deleted`) VALUES ('sutter','','sutter.w22itforce-tech.com','','','$2a$04$dESddjB2X6IKrDTE.I8lI..pkVc2m1cGtDvorgML8lhwiZaHKsREK','','2025-10-18 23:00:24.109','2025-10-18 23:00:24.109',false)
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.143ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[3.909ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[3.788ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.184ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.922ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.717ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.677ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.159ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.524ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.155ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.195ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.470ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.803ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.118ms] [rows:-] SELECT DATABASE()
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.472ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/18 23:01:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.528ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 00:05:15 /Users/atlas/go/src/venturan_eams/app/services/user.go:20 record not found
+[1.101ms] [rows:0] SELECT `id` FROM `users` WHERE email = 'sutter.w@2552itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/19 00:05:15 /Users/atlas/go/src/venturan_eams/app/services/user.go:26
+[2.475ms] [rows:1] INSERT INTO `users` (`name`,`nick_name`,`email`,`avatar`,`mobile`,`password`,`employ_time`,`created_at`,`updated_at`,`is_deleted`) VALUES ('sutter','','sutter.w@2552itforce-tech.com','','','$2a$04$lnmIViRjkCl.SRhqks4i.OWEsXwdH7NgK5/R8FBcFxGkj1RJTJ84W','','2025-10-19 00:05:15.077','2025-10-19 00:05:15.077',false)
+
+2025/10/19 00:05:17 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[0.960ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.w@2552itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/19 00:05:17 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[0.914ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.w@2552itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/19 00:05:17 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[0.824ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.w@2552itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/19 00:05:18 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[0.843ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.w@2552itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/19 00:05:18 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[2.174ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.w@2552itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/19 00:05:18 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[0.908ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.w@2552itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/19 00:05:18 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[0.598ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.w@2552itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/19 00:05:18 /Users/atlas/go/src/venturan_eams/app/services/user.go:20
+[0.720ms] [rows:1] SELECT `id` FROM `users` WHERE email = 'sutter.w@2552itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.145ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.763ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.468ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.236ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.834ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.062ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.344ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.150ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.615ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.439ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.154ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.606ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.069ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.142ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.545ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:17:30 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.988ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 00:17:47 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.177ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:17:47 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.262ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:17:47 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.815ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:17:47 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[14.075ms] [rows:0] CREATE TABLE `users` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191) NOT NULL COMMENT '用户名称',`nick_name` varchar(191) DEFAULT '' COMMENT '用户别称',`email` varchar(191) DEFAULT '' COMMENT '邮箱地址',`avatar` varchar(191) DEFAULT '' COMMENT '头像',`mobile` varchar(191) DEFAULT '' COMMENT '用户手机号',`password` varchar(191) NOT NULL DEFAULT '' COMMENT '用户密码',`employ_time` varchar(191) NOT NULL COMMENT '入职时间',`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` boolean DEFAULT false,PRIMARY KEY (`id`),INDEX `idx_users_mobile` (`mobile`),INDEX `idx_users_employ_time` (`employ_time`),INDEX `idx_users_is_deleted` (`is_deleted`))
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.141ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.159ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.677ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.312ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.743ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.533ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.119ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.178ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.767ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.079ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.140ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.554ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.979ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.131ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.473ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.950ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 00:18:29 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.216ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.323ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.588ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.182ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.746ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.414ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.070ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.202ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.829ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.781ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.237ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.028ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.726ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.108ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.475ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.748ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 00:19:12 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.335ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.869ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.047ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.154ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.419ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.356ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.261ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.149ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.515ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.915ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.090ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.346ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.612ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.083ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.387ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.858ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 00:19:35 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.159ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.118ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.893ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.176ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.818ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.509ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.007ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.167ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.681ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.031ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.143ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.597ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.048ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.137ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.513ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.076ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 00:19:55 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.265ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.317ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.963ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.255ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.858ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.685ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.686ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.158ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.547ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.180ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.145ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.548ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.072ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.150ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.552ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.244ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 00:22:38 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.165ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.366ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.299ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.152ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.779ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.638ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.952ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.132ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.791ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.733ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.180ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.699ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.511ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.188ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.565ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.037ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 00:26:58 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:27:43 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:27:43 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.366ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:27:43 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.411ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:27:43 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.834ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:27:43 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[17.632ms] [rows:0] CREATE TABLE `users` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191) NOT NULL COMMENT '用户名称',`nick_name` varchar(191) DEFAULT '' COMMENT '用户别称',`email` varchar(191) DEFAULT '' COMMENT '邮箱地址',`avatar` varchar(191) DEFAULT '' COMMENT '头像',`mobile` varchar(191) DEFAULT '' COMMENT '用户手机号',`password` varchar(191) NOT NULL DEFAULT '' COMMENT '用户密码',`employ_time` varchar(191) NOT NULL COMMENT '入职时间',`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` boolean DEFAULT false,PRIMARY KEY (`id`),INDEX `idx_users_mobile` (`mobile`),INDEX `idx_users_employ_time` (`employ_time`),INDEX `idx_users_is_deleted` (`is_deleted`))
+
+2025/10/19 00:27:43 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.224ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.609ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.828ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.178ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.774ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[3.447ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.917ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[10.784ms] [rows:0] ALTER TABLE `users` ADD `user_id` bigint unsigned
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.128ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.501ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.077ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.096ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.389ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.659ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.104ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.354ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.778ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 00:30:25 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:31:02 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:31:02 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.634ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:31:02 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.581ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:31:02 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.789ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:31:02 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[12.510ms] [rows:0] CREATE TABLE `users` (`id` bigint unsigned AUTO_INCREMENT,`user_id` bigint unsigned,`name` varchar(191) NOT NULL COMMENT '用户名称',`nick_name` varchar(191) DEFAULT '' COMMENT '用户别称',`email` varchar(191) DEFAULT '' COMMENT '邮箱地址',`avatar` varchar(191) DEFAULT '' COMMENT '头像',`mobile` varchar(191) DEFAULT '' COMMENT '用户手机号',`password` varchar(191) NOT NULL DEFAULT '' COMMENT '用户密码',`employ_time` varchar(191) NOT NULL COMMENT '入职时间',`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` boolean DEFAULT false,PRIMARY KEY (`id`),INDEX `idx_users_mobile` (`mobile`),INDEX `idx_users_employ_time` (`employ_time`),INDEX `idx_users_is_deleted` (`is_deleted`))
+
+2025/10/19 00:31:02 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", User:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", Users:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.234ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.210ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.965ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.090ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.840ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[3.368ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.319ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.131ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.419ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.776ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.121ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.444ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.069ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.144ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.529ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.009ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 00:32:45 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", Users:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 01:04:18 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value &models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", Users:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 01:04:18 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.210ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 01:04:18 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.827ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 01:04:18 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.121ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 01:04:18 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[15.493ms] [rows:0] CREATE TABLE `users` (`id` bigint unsigned AUTO_INCREMENT,`user_id` bigint unsigned,`name` varchar(191) NOT NULL COMMENT '用户名称',`nick_name` varchar(191) DEFAULT '' COMMENT '用户别称',`email` varchar(191) DEFAULT '' COMMENT '邮箱地址',`avatar` varchar(191) DEFAULT '' COMMENT '头像',`mobile` varchar(191) DEFAULT '' COMMENT '用户手机号',`password` varchar(191) NOT NULL DEFAULT '' COMMENT '用户密码',`employ_time` varchar(191) NOT NULL COMMENT '入职时间',`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` boolean DEFAULT false,PRIMARY KEY (`id`),INDEX `idx_users_mobile` (`mobile`),INDEX `idx_users_employ_time` (`employ_time`),INDEX `idx_users_is_deleted` (`is_deleted`))
+
+2025/10/19 01:04:18 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value &models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", Users:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value &models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", Users:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.224ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.546ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.904ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.251ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.874ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[3.141ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.991ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.159ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.613ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.130ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.145ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.550ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.055ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_employ_time'
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.146ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.600ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.045ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/10/19 01:05:05 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[error] failed to parse value &models.Department{ID:models.ID{ID:0x0}, DepartmentName:"", Users:[]models.User(nil), Timestamps:models.Timestamps{CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, IsDeleted:models.IsDeleted{IsDeleted:false}}, got error invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.195ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.525ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.796ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[14.070ms] [rows:0] CREATE TABLE `users` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191) NOT NULL COMMENT '用户名称',`nick_name` varchar(191) DEFAULT '' COMMENT '用户别称',`email` varchar(191) DEFAULT '' COMMENT '邮箱地址',`avatar` varchar(191) DEFAULT '' COMMENT '头像',`mobile` varchar(191) DEFAULT '' COMMENT '用户手机号',`password` varchar(191) NOT NULL DEFAULT '' COMMENT '用户密码',`employ_time` varchar(191) NOT NULL COMMENT '入职时间',`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` boolean DEFAULT false,PRIMARY KEY (`id`),INDEX `idx_users_mobile` (`mobile`),INDEX `idx_users_employ_time` (`employ_time`),INDEX `idx_users_is_deleted` (`is_deleted`))
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.197ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.783ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.955ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'departments' AND table_type = 'BASE TABLE'
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[4.902ms] [rows:0] CREATE TABLE `departments` (`id` bigint unsigned AUTO_INCREMENT,`department_name` varchar(191) NOT NULL COMMENT '部门名称',`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` boolean DEFAULT false,PRIMARY KEY (`id`),INDEX `idx_departments_is_deleted` (`is_deleted`))
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.109ms] [rows:-] SELECT DATABASE()
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.375ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.565ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'department_user' AND table_type = 'BASE TABLE'
+
+2025/10/19 01:06:22 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.572ms] [rows:0] CREATE TABLE `department_user` (`department_id` bigint unsigned,`user_id` bigint unsigned,PRIMARY KEY (`department_id`,`user_id`))

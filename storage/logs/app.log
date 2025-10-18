@@ -35,3 +35,36 @@
 [2025-10-18 22:03:17.829]	local.info	venturan_eams/main.go:13	log init success!
 [2025-10-18 22:03:43.233]	local.info	venturan_eams/main.go:13	log init success!
 [2025-10-18 22:04:25.567]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-18 22:30:58.364]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-18 22:47:24.267]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-18 22:53:07.829]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-18 22:55:30.373]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-18 22:56:06.194]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-18 23:01:24.733]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:17:30.763]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:17:47.869]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:18:29.351]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:18:29.368]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 00:19:12.745]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:19:12.763]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 00:19:35.510]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:19:35.526]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 00:19:55.013]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:19:55.030]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 00:22:38.483]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:22:38.501]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 00:26:58.913]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:26:58.933]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 00:27:43.401]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:27:43.434]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 00:30:25.089]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:30:25.120]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 00:31:02.616]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:31:02.640]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 00:32:45.209]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 00:32:45.226]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 01:04:18.949]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 01:04:18.974]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 01:05:05.206]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 01:05:05.226]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 01:06:22.851]	local.info	venturan_eams/main.go:13	log init success!
