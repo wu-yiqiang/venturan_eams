@@ -1,0 +1,66 @@
+definitions:
+  request.Login:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    required:
+    - email
+    - password
+    type: object
+  response.Response:
+    properties:
+      code:
+        description: 业务码
+        type: integer
+      data:
+        description: 数据
+      msg:
+        description: 提示消息
+        type: string
+    type: object
+host: 127.0.0.1:9527
+info:
+  contact:
+    email: wu_yiqiang@outlook.com
+    name: sutter
+  description: 基于Golang Gin框架的EAMS系统
+  termsOfService: https://github.com/18211167516/Go-Gin-Api
+  title: 基于Golang Gin框架的EAMS系统
+  version: "1.0"
+paths:
+  /user/login:
+    post:
+      consumes:
+      - application/json
+      description: 用户登陆
+      operationId: /user/login
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.Login'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/request.Login'
+              type: object
+      summary: 用户登陆
+      tags:
+      - 登录接口
+securityDefinitions:
+  Auth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
