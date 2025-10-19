@@ -15,7 +15,7 @@ import (
 
 // @Summary 用户注册
 // @Description 用户注册
-// @Tags 注册接口
+// @Tags 用户管理
 // @ID /user/register
 // @Accept  json
 // @Produce  json
@@ -37,7 +37,7 @@ func Register(c *gin.Context) {
 
 // @Summary 用户登陆
 // @Description 用户登陆
-// @Tags 登录接口
+// @Tags 用户管理
 // @ID /user/login
 // @Accept  json
 // @Produce  json
