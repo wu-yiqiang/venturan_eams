@@ -9,6 +9,10 @@ type ID struct {
 	ID uint `json:"id" gorm:"primaryKey"`
 }
 
+type Name struct {
+	Name string `json:"name" gorm:"not null;comment:字段名称"`
+}
+
 // 创建、更新时间
 type Timestamps struct {
 	CreatedAt time.Time `json:"created_at"`

@@ -68,3 +68,99 @@
 [2025-10-19 01:05:05.206]	local.info	venturan_eams/main.go:13	log init success!
 [2025-10-19 01:05:05.226]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
 [2025-10-19 01:06:22.851]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:11:15.394]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:11:15.500]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:12:46.775]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:12:46.870]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:13:02.941]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:13:03.042]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:21:49.986]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:21:50.083]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:22:15.465]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:22:15.482]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 11:22:26.419]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:22:26.436]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 11:25:01.446]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:25:01.545]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:25:15.809]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:25:15.902]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:25:59.781]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:25:59.871]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:26:11.835]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:26:11.925]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:26:43.023]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:26:43.113]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:30:54.950]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:30:55.038]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:31:07.335]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:31:07.424]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:31:27.802]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:31:27.895]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:31:43.762]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:31:43.854]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:35:01.056]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:35:01.153]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:36:43.634]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:36:43.731]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:38:10.336]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:38:10.438]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:38:21.415]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:38:21.510]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 11:39:44.582]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 11:39:44.679]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 13:18:02.880]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 13:18:02.971]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 13:18:16.853]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 13:18:16.943]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 13:19:57.126]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 13:19:57.144]	local.error	bootstrap/db.go:66	migrate table failed	{"err": "invalid field found for struct venturan/app/models.Department's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface"}
+[2025-10-19 13:32:54.801]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 13:32:54.890]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 13:34:25.537]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 13:34:25.633]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 13:34:42.587]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 13:34:42.689]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 13:52:34.788]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 13:52:34.890]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 13:52:46.987]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 13:52:47.088]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 14:00:31.345]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 14:00:31.443]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 14:01:59.971]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 14:02:00.067]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 14:11:33.094]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 14:11:33.191]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 15:36:53.868]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 15:36:53.972]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 15:37:59.874]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 15:37:59.969]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 15:43:28.468]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 15:43:28.565]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 15:46:40.833]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 15:46:40.927]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 15:51:01.206]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 15:51:01.297]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 15:52:10.944]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 15:52:11.036]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 16:01:19.546]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 16:01:19.641]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp 127.0.0.1:6379: connect: connection refused"}
+[2025-10-19 16:14:15.556]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 20:15:20.074]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 20:19:28.230]	local.info	venturan_eams/main.go:13	log init success!
+[2025-10-19 20:31:31.981]	local.info	venturan_eams/main.go:27	log init success!
+[2025-10-19 20:32:08.330]	local.info	venturan_eams/main.go:27	log init success!
+[2025-10-19 20:34:05.813]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 20:36:35.609]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 20:36:50.242]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 20:40:12.806]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 20:40:33.054]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 20:41:00.182]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 21:24:40.541]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 21:25:48.772]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 21:26:10.020]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 21:31:48.186]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 21:31:52.649]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 21:32:26.497]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 21:33:17.015]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 21:33:22.162]	local.info	venturan_eams/main.go:23	log init success!
+[2025-10-19 21:37:26.114]	local.info	venturan_eams/main.go:23	log init success!

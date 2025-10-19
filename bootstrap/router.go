@@ -3,18 +3,34 @@ package bootstrap
 import (
 	"context"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+	"venturan/app/middleware"
+	"venturan/docs"
 	"venturan/global"
 	"venturan/routes"
 )
 
 func setupRouter() *gin.Engine {
 	router := gin.Default()
+	// 跨域
+	router.Use(middleware.Cors())
+	// swagger
+	docs.SwaggerInfo.Title = global.App.Config.Swagger.Title
+	docs.SwaggerInfo.Description = global.App.Config.Swagger.Desc
+	docs.SwaggerInfo.Host = global.App.Config.Swagger.Host + ":" + global.App.Config.App.Port
+	docs.SwaggerInfo.BasePath = global.App.Config.Swagger.BasePath
+	docs.SwaggerInfo.Version = global.App.Config.Swagger.Version
+	docs.SwaggerInfo.Schemes = []string{"http", "https"}
+	router.Static("/html", "./public")
+	// 设置 swagger访问路由
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	// 前端项目静态资源
 	router.StaticFile("/", "./static/dist/index.html")
 	router.Static("/assets", "./static/dist/assets")
@@ -24,7 +40,7 @@ func setupRouter() *gin.Engine {
 	router.Static("/storage", "./storage/app/public")
 
 	// 注册 api 分组路由
-	apiGroup := router.Group("/venturan")
+	apiGroup := router.Group("/")
 	routes.SetApiGroupRoutes(apiGroup)
 	return router
 }

@@ -27,14 +27,8 @@ const (
 	AppGuardName = "app"
 )
 
-type TokenOutPut struct {
-	AccessToken string `json:"access_token"`
-	ExpiresIn   int    `json:"expires_in"`
-	TokenType   string `json:"token_type"`
-}
-
 // CreateToken 生成 Token
-func (jwtService *jwtService) CreateToken(GuardName string, user JwtUser) (tokenData TokenOutPut, err error, token *jwt.Token) {
+func (jwtService *jwtService) CreateToken(GuardName string, user JwtUser) (tokenData string, err error, token *jwt.Token) {
 	token = jwt.NewWithClaims(
 		jwt.SigningMethodHS256,
 		CustomClaims{
@@ -48,12 +42,7 @@ func (jwtService *jwtService) CreateToken(GuardName string, user JwtUser) (token
 	)
 
 	tokenStr, err := token.SignedString([]byte(global.App.Config.Jwt.Secret))
-
-	tokenData = TokenOutPut{
-		tokenStr,
-		int(global.App.Config.Jwt.JwtTtl),
-		TokenType,
-	}
+	tokenData = tokenStr
 	return
 }
 

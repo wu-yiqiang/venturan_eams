@@ -41,3 +41,10 @@ redis:
   db: 0
   password:
 
+swagger:
+  title: "EAMS swagger API"
+  desc: "EAMS API管理"
+  host: "127.0.0.1"
+  version: 1.0
+  base_path: "/"
+

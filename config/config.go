@@ -6,6 +6,7 @@ type Configuration struct {
 	Database Database `mapstructure:"database" json:"database" yaml:"database"`
 	Jwt      Jwt      `mapstructure:"jwt" json:"jwt" yaml:"jwt"`
 	Redis    Redis    `mapstructure:"redis" json:"redis" yaml:"redis"`
+	Swagger  Swagger  `mapstructure:"swagger" json:"swagger" yaml:"swagger"`
 }
 
 type App struct {
@@ -53,4 +54,12 @@ type Redis struct {
 	Port     int    `mapstructure:"port" json:"port" yaml:"port"`
 	DB       int    `mapstructure:"db" json:"db" yaml:"db"`
 	Password string `mapstructure:"password" json:"password" yaml:"password"`
+}
+
+type Swagger struct {
+	Title    string `mapstructure:"title" json:"title" yaml:"title"`
+	Version  string `mapstructure:"version" json:"version" yaml:"version"`
+	Desc     string `mapstructure:"desc" json:"desc" yaml:"desc"`
+	Host     string `mapstructure:"host" json:"host" yaml:"host"`
+	BasePath string `mapstructure:"base_path" json:"base_path" yaml:"base_path"`
 }
