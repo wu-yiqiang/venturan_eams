@@ -1,6 +1,7 @@
 package bootstrap
 
 import (
+	"flag"
 	"fmt"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
@@ -9,8 +10,14 @@ import (
 )
 
 func InitializeConfig() *viper.Viper {
+	// 依据运行环境，设置配置文件路径
+	mode := flag.String("mode", "dev", "config env mode")
+	flag.Parse()
+	modeName := *mode
+	var config string
+	config = "config/" + modeName + ".yaml"
+	fmt.Println("环境", config)
 	// 设置配置文件路径
-	config := "config/dev.yaml"
 	// 生产环境可以通过设置环境变量来改变配置文件路径
 	if configEnv := os.Getenv("VIPER_CONFIG"); configEnv != "" {
 		config = configEnv
