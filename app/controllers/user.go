@@ -13,7 +13,15 @@ import (
 	"venturan/utils"
 )
 
-// Register 用户注册
+// @Summary 用户注册
+// @Description 用户注册
+// @Tags 注册接口
+// @ID /user/register
+// @Accept  json
+// @Produce  json
+// @Param body body request.Register true "body"
+// @Success 200 {object} response.Response{data=request.Register} "success"
+// @Router /user/register [post]
 func Register(c *gin.Context) {
 	var form request.Register
 	if err := c.ShouldBindJSON(&form); err != nil {
@@ -27,7 +35,6 @@ func Register(c *gin.Context) {
 	}
 }
 
-// AdminLogin godoc
 // @Summary 用户登陆
 // @Description 用户登陆
 // @Tags 登录接口
