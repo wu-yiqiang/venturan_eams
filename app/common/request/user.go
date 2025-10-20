@@ -8,12 +8,12 @@ type Register struct {
 	Name         string `form:"name" json:"name" binding:"required"`
 	NickName     string `form:"nick_name" json:"nick_name"`
 	Email        string `form:"email" json:"email" binding:"required,email"`
+	Password     string `form:"password" json:"password" binding:"required"`
 	Avatar       string `form:"avatar" json:"avatar"`
 	Mobile       string `form:"mobile" json:"mobile"`
 	DepartmentId uint   `form:"department_id" json:"department_id"`
 	PositionId   uint   `form:"position_id" json:"position_id"`
-	Password     string `form:"password" json:"password" binding:"required"`
-	EmployDay    string `form:"employ_day" json:"employ_day"`
+	EmployDate   string `form:"employ_date" json:"employ_day"`
 }
 
 func (register Register) GetMessages() ValidatorMessages {
