@@ -11,17 +11,26 @@ go mod download
 go mod vendor
 
 本地启动
-go run main.go --mode dev
+export GO_ENV=dev
+go run main.go
 
 开发环境启动
-go run main.go --mode test
+export GO_ENV=test
+go run main.go
 
 生产环境启动
-go run main.go --mode prod
+export GO_ENV=prod
+go run main.go
 
 开发环境打包
+export GO_ENV=dev
+go build -o venturan main.go
 
 测试环境打包
+export GO_ENV=test
+go build -o venturan main.go
 
 生产环境打包
+export GO_ENV=prod
+go build -o venturan main.go
 
