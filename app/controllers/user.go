@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"strconv"
 	"time"
 	"venturan/app/common/request"
 	"venturan/app/common/response"
@@ -68,6 +69,33 @@ func Login(c *gin.Context) {
 		}
 		response.Success(c, userInfo)
 	}
+}
+
+// @Summary 用户删除
+// @Description 用户删除
+// @Tags 用户管理
+// @ID /user/{id}
+// @Accept  json
+// @Produce  json
+// @Param id path int 1 "id"
+// @Router /user/{id} [delete]
+func Delete(c *gin.Context) {
+	userId := c.Param("user_id")
+	if userId == "" {
+		response.Fail(c, serviceErrors.UserIdNotEmpty)
+		return
+	}
+	id, err := strconv.Atoi(userId)
+	if err != nil {
+		response.Fail(c, serviceErrors.DeleteError)
+		return
+	}
+	err, user := services.UserService.Delete(uint(id))
+	if err != nil {
+		response.Fail(c, serviceErrors.DeleteError)
+		return
+	}
+	response.Success(c, user)
 }
 
 func Info(c *gin.Context) {

@@ -13,6 +13,7 @@ func SetApiGroupRoutes(router *gin.RouterGroup) {
 	router.POST("/user/login", controllers.Login)
 	authRouter := router.Group("").Use(middleware.JWTAuth(services.AppGuardName))
 	{
+		authRouter.DELETE("/user/:user_id", controllers.Delete)
 		authRouter.POST("/user/info", controllers.Info)
 		authRouter.POST("/user/logout", controllers.Logout)
 	}

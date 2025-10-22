@@ -22,7 +22,6 @@ func JWTAuth(GuardName string) gin.HandlerFunc {
 			return []byte(global.App.Config.Jwt.Secret), nil
 		})
 		if err != nil {
-			// response.TokenFail(c)
 			response.Fail(c, serviceErrors.TokenIsNotExist)
 			c.Abort()
 			return
@@ -31,7 +30,6 @@ func JWTAuth(GuardName string) gin.HandlerFunc {
 		claims := token.Claims.(*services.CustomClaims)
 		// Token 发布者校验
 		if claims.Issuer != GuardName {
-			// response.TokenFail(c)
 			response.Fail(c, serviceErrors.TokenIsExpired)
 			c.Abort()
 			return

@@ -66,6 +66,23 @@ info:
   title: 基于Golang Gin框架的EAMS系统
   version: "1.0"
 paths:
+  /user/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: 用户删除
+      operationId: /user/{id}
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: 用户删除
+      tags:
+      - 用户管理
   /user/login:
     post:
       consumes:

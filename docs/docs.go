@@ -113,6 +113,31 @@ const docTemplate = `{
                     }
                 }
             }
+        },
+        "/user/{id}": {
+            "delete": {
+                "description": "用户删除",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户管理"
+                ],
+                "summary": "用户删除",
+                "operationId": "/user/{id}",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "id",
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "responses": {}
+            }
         }
     },
     "definitions": {

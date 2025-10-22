@@ -38,6 +38,14 @@ func (userService *userService) Login(params request.Login) (err error, user *mo
 	return
 }
 
+func (userService *userService) Delete(userId uint) (err error, user *models.User) {
+	err = global.App.DB.Where("id = ?", userId).First(&user).Update("is_deleted", 1).Error
+	if err != nil {
+		err = errors.New(serviceErrors.DeleteError.Msg)
+	}
+	return
+}
+
 func (userService *userService) GetUserInfo(id string) (err error, user models.User) {
 	intId, err := strconv.Atoi(id)
 	err = global.App.DB.First(&user, intId).Error
