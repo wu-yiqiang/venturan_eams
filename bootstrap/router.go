@@ -21,6 +21,8 @@ func setupRouter() *gin.Engine {
 	router := gin.Default()
 	// 跨域
 	router.Use(middleware.Cors())
+	// 限流
+	router.Use(middleware.RateLimitMiddleware(time.Second, global.App.Config.App.RateLimitCapacity, global.App.Config.App.RateLimitQuantum)) //初始100，每秒放出100
 	// swagger
 	docs.SwaggerInfo.Title = global.App.Config.Swagger.Title
 	docs.SwaggerInfo.Description = global.App.Config.Swagger.Desc

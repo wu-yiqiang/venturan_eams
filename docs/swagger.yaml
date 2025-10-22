@@ -2,8 +2,10 @@ definitions:
   request.Login:
     properties:
       email:
+        example: sutter.wu@itforce-tech.com
         type: string
       password:
+        example: 1234@Abcd
         type: string
     required:
     - email

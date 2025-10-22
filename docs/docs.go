@@ -124,10 +124,12 @@ const docTemplate = `{
             ],
             "properties": {
                 "email": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "sutter.wu@itforce-tech.com"
                 },
                 "password": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "1234@Abcd"
                 }
             }
         },

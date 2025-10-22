@@ -26,8 +26,8 @@ func (register Register) GetMessages() ValidatorMessages {
 }
 
 type Login struct {
-	Email    string `form:"email" json:"email" binding:"required,email"`
-	Password string `form:"password" json:"password" binding:"required"`
+	Email    string `form:"email" json:"email" example:"sutter.wu@itforce-tech.com" binding:"required,email"`
+	Password string `form:"password" json:"password" example:"1234@Abcd" binding:"required"`
 }
 
 func (login Login) GetMessages() ValidatorMessages {

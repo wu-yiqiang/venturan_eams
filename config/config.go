@@ -10,10 +10,12 @@ type Configuration struct {
 }
 
 type App struct {
-	Env     string `mapstructure:"env" json:"env" yaml:"env"`
-	Port    string `mapstructure:"port" json:"port" yaml:"port"`
-	AppName string `mapstructure:"app_name" json:"app_name" yaml:"app_name"`
-	AppUrl  string `mapstructure:"app_url" json:"app_url" yaml:"app_url"`
+	Env               string `mapstructure:"env" json:"env" yaml:"env"`
+	Port              string `mapstructure:"port" json:"port" yaml:"port"`
+	AppName           string `mapstructure:"app_name" json:"app_name" yaml:"app_name"`
+	AppUrl            string `mapstructure:"app_url" json:"app_url" yaml:"app_url"`
+	RateLimitCapacity int64  `mapstructure:"rate_limit_capacity" json:"rate_limit_capacity" yaml:"rate_limit_capacity"`
+	RateLimitQuantum  int64  `mapstructure:"rate_limit_quantum" json:"rate_limit_quantum" yaml:"rate_limit_quantum"`
 }
 
 type Log struct {

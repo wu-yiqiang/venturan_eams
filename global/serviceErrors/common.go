@@ -13,4 +13,5 @@ var (
 	EmailAddrIsNotEmpty      = response.Response{1010006, nil, "邮箱地址不能为空"}
 	TokentokenIssuanceFailed = response.Response{1010007, nil, "token签发失败"}
 	EmailAddIsExisted        = response.Response{1010008, nil, "邮箱地址已存在"}
+	FrequentRequests         = response.Response{1010009, nil, "接口请求频繁，请稍后重试"}
 )
