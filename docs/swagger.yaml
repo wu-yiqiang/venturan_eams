@@ -14,22 +14,31 @@ definitions:
   request.Register:
     properties:
       avatar:
+        example: ""
         type: string
       department_id:
+        example: 1
         type: integer
       email:
+        example: sutter.wu@itforce-tech.com
         type: string
-      employ_day:
+      employ_date:
+        example: "2025-09-05"
         type: string
       mobile:
+        example: "13557080956"
         type: string
       name:
+        example: Sutter
         type: string
       nick_name:
+        example: Sutter
         type: string
       password:
+        example: 1234@Abcd
         type: string
       position_id:
+        example: 1
         type: integer
     required:
     - email

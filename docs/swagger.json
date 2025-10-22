@@ -134,31 +134,40 @@
             ],
             "properties": {
                 "avatar": {
-                    "type": "string"
+                    "type": "string",
+                    "example": ""
                 },
                 "department_id": {
-                    "type": "integer"
+                    "type": "integer",
+                    "example": 1
                 },
                 "email": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "sutter.wu@itforce-tech.com"
                 },
-                "employ_day": {
-                    "type": "string"
+                "employ_date": {
+                    "type": "string",
+                    "example": "2025-09-05"
                 },
                 "mobile": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "13557080956"
                 },
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Sutter"
                 },
                 "nick_name": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Sutter"
                 },
                 "password": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "1234@Abcd"
                 },
                 "position_id": {
-                    "type": "integer"
+                    "type": "integer",
+                    "example": 1
                 }
             }
         },
