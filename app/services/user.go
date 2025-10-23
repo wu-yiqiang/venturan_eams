@@ -3,6 +3,7 @@ package services
 import (
 	"errors"
 	"strconv"
+	"time"
 	"venturan/app/common/request"
 	"venturan/app/models"
 	"venturan/global"
@@ -42,6 +43,15 @@ func (userService *userService) Delete(userId uint) (err error, user *models.Use
 	err = global.App.DB.Where("id = ?", userId).First(&user).Update("is_deleted", 1).Error
 	if err != nil {
 		err = errors.New(serviceErrors.DeleteError.Msg)
+	}
+	return
+}
+
+func (userService *userService) DeleteResgin() (err error) {
+	users := []*models.User{}
+	err = global.App.DB.Where("is_deleted = 0 AND resign_date < ?", time.Now()).Find(&users).Update("is_deleted", 1).Error
+	if err != nil {
+		return
 	}
 	return
 }
