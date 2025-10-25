@@ -16,4 +16,5 @@ var (
 	UserIsNotExistOrPasswordError = response.Response{1020009, nil, "帐号不存在或密码错误"}
 	UserCreateFailed              = response.Response{1020010, nil, "用户创建失败"}
 	UserNameIsNotEmpty            = response.Response{1020011, nil, "用户名不能为空"}
+	UserExitFailed                = response.Response{1020012, nil, "用户退出失败"}
 )

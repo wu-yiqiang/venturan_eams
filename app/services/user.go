@@ -66,3 +66,11 @@ func (userService *userService) GetUserInfo(id string) (err error, user models.U
 	}
 	return
 }
+
+func (userService *userService) UserLogout(key string) (err error) {
+	err = utils.ClearValue(key)
+	if err != nil {
+		err = errors.New(serviceErrors.UserLogoutFail.Msg)
+	}
+	return
+}

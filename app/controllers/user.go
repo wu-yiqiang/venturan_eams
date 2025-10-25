@@ -108,10 +108,11 @@ func Info(c *gin.Context) {
 }
 
 func Logout(c *gin.Context) {
-	//err := services.JwtService.JoinBlackList(c.Keys["token"].(*jwt.Token))
-	//if err != nil {
-	//	response.BusinessFail(c, "登出失败")
-	//	return
-	//}
-	//response.Success(c, nil)
+	token := c.Request.Header.Get("Authorization")
+	err := services.UserService.UserLogout(token)
+	if err != nil {
+		response.Fail(c, serviceErrors.UserExitFailed)
+		return
+	}
+	response.Success(c, nil)
 }

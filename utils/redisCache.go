@@ -18,3 +18,19 @@ func SetRedisCache(key string, value map[string]interface{}, expiration time.Dur
 	}
 	return nil
 }
+
+func GetRedisCache(key string) (data interface{}, err error) {
+	data, errors := global.App.Redis.Get(context.Background(), key).Result()
+	if errors != nil {
+		return nil, errors
+	}
+	return data, nil
+}
+
+func ClearValue(key string) (err error) {
+	_, errors := global.App.Redis.Del(context.Background(), key).Result()
+	if errors != nil {
+		return errors
+	}
+	return nil
+}
