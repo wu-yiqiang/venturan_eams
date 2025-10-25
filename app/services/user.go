@@ -32,7 +32,9 @@ func (userService *userService) Register(params request.Register) (err error, us
 }
 
 func (userService *userService) Login(params request.Login) (err error, user *models.User) {
-	err = global.App.DB.Where("email = ?", params.Email).First(&user).Error
+	err = global.App.DB.Where("email = ?", params.Email).Select("users.*, departments.name as department_name, positions.name as position_name").
+		Joins("LEFT JOIN departments ON users.department_id = departments.id").
+		Joins("LEFT JOIN positions ON users.position_id = positions.id").First(&user).Error
 	if err != nil || !utils.BcryptMakeCheck([]byte(params.Password), user.Password) {
 		err = errors.New(serviceErrors.UserIsNotExistOrPasswordError.Msg)
 	}
