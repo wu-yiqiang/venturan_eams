@@ -21,7 +21,7 @@ import (
 // @Accept  json
 // @Produce  json
 // @Param body body request.Register true "body"
-// @Success 200 {object} response.Response{data=request.Register} "success"
+// @Success 200 {object} response.Response{data=models.User} "success"
 // @Router /user/register [post]
 func Register(c *gin.Context) {
 	var form request.Register
@@ -42,8 +42,8 @@ func Register(c *gin.Context) {
 // @ID /user/login
 // @Accept  json
 // @Produce  json
-// @Param body body request.Login true "body"    # [值得名称] body [值得类型] [是否必传] "[返回值名称]"
-// @Success 200 {object} response.Response{data=request.Login} "success"
+// @Param body body request.Login true "body"
+// @Success 200 {object} response.Response{data=models.User} "success"
 // @Router /user/login [post]
 func Login(c *gin.Context) {
 	var form request.Login

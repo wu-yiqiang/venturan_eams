@@ -7,14 +7,14 @@ import (
 	"venturan/app/services"
 )
 
-// SetApiGroupRoutes 定义 api 分组路由
-func SetApiGroupRoutes(router *gin.RouterGroup) {
-	router.POST("/user/register", controllers.Register)
-	router.POST("/user/login", controllers.Login)
+// user
+func SetUserGroupRoutes(router *gin.RouterGroup) {
+	router.POST("/register", controllers.Register)
+	router.POST("/login", controllers.Login)
 	authRouter := router.Group("").Use(middleware.JWTAuth(services.AppGuardName))
 	{
-		authRouter.DELETE("/user/:user_id", controllers.Delete)
-		authRouter.POST("/user/info", controllers.Info)
-		authRouter.POST("/user/logout", controllers.Logout)
+		authRouter.DELETE("/:user_id", controllers.Delete)
+		authRouter.POST("/info", controllers.Info)
+		authRouter.POST("/logout", controllers.Logout)
 	}
 }

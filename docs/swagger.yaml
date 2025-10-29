@@ -1,4 +1,58 @@
 definitions:
+  models.CookBook:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      image:
+        type: string
+      is_deleted:
+        description: 0 删除 1 使用中 2 归档中
+        type: integer
+      name:
+        type: string
+      price:
+        type: number
+      updated_at:
+        type: string
+    type: object
+  models.User:
+    properties:
+      avatar:
+        type: string
+      created_at:
+        type: string
+      department_id:
+        type: integer
+      department_name:
+        type: string
+      email:
+        type: string
+      employ_date:
+        type: string
+      id:
+        type: integer
+      is_deleted:
+        description: 0 删除 1 使用中 2 归档中
+        type: integer
+      mobile:
+        type: string
+      name:
+        type: string
+      nick_name:
+        type: string
+      position_id:
+        type: integer
+      position_name:
+        type: string
+      resign_date:
+        type: string
+      updated_at:
+        type: string
+    type: object
   request.Login:
     properties:
       email:
@@ -66,6 +120,27 @@ info:
   title: 基于Golang Gin框架的EAMS系统
   version: "1.0"
 paths:
+  /cookbook/menus:
+    post:
+      consumes:
+      - application/json
+      description: 热门服务
+      operationId: /cookbook/menus
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CookBook'
+              type: object
+      summary: 热门服务
+      tags:
+      - 今日菜单
   /user/{id}:
     delete:
       consumes:
@@ -106,7 +181,7 @@ paths:
             - $ref: '#/definitions/response.Response'
             - properties:
                 data:
-                  $ref: '#/definitions/request.Login'
+                  $ref: '#/definitions/models.User'
               type: object
       summary: 用户登陆
       tags:
@@ -134,7 +209,7 @@ paths:
             - $ref: '#/definitions/response.Response'
             - properties:
                 data:
-                  $ref: '#/definitions/request.Register'
+                  $ref: '#/definitions/models.User'
               type: object
       summary: 用户注册
       tags:
