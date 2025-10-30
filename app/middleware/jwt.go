@@ -13,7 +13,7 @@ func JWTAuth(GuardName string) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		tokenStr := c.Request.Header.Get("Authorization")
 		if tokenStr == "" {
-			response.Fail(c, serviceErrors.TokenIsNotEmpty)
+			response.Fail(c, serviceErrors.TokenIsExpired)
 			c.Abort()
 			return
 		}
@@ -22,7 +22,7 @@ func JWTAuth(GuardName string) gin.HandlerFunc {
 			return []byte(global.App.Config.Jwt.Secret), nil
 		})
 		if err != nil {
-			response.Fail(c, serviceErrors.TokenIsNotExist)
+			response.Fail(c, serviceErrors.TokenIsExpired)
 			c.Abort()
 			return
 		}
