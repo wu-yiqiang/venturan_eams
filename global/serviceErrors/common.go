@@ -14,4 +14,6 @@ var (
 	FrequentRequests         = response.Response{1010007, nil, "接口请求频繁，请稍后重试"}
 	DeleteError              = response.Response{1010008, nil, "删除失败"}
 	QueryError               = response.Response{1010009, nil, "查询失败"}
+	CreateError              = response.Response{1010010, nil, "创建失败"}
+	UpdateError              = response.Response{1010011, nil, "更新失败"}
 )

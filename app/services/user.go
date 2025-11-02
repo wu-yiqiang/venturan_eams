@@ -74,3 +74,11 @@ func (userService *userService) UserLogout(key string) (err error) {
 	}
 	return
 }
+
+func (userService *userService) FindUserByPlateNumber(plateNumber string) (err error, user models.User) {
+	err = global.App.DB.Where("plate_number = ? And is_deleted = ?", plateNumber, 0).First(&user).Error
+	if err != nil {
+		return
+	}
+	return nil, user
+}

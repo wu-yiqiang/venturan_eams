@@ -50,6 +50,10 @@ func setupRouter() *gin.Engine {
 	{
 		routes.SetCookBookGroupRoutes(cookBookGroup)
 	}
+	parkGroup := router.Group("/park")
+	{
+		routes.SetParkGroupRoutes(parkGroup)
+	}
 	return router
 }
 

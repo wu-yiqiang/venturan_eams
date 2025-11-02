@@ -7,9 +7,9 @@ import (
 	"venturan/global/serviceErrors"
 )
 
-// @Summary 热门服务
-// @Description 热门服务
-// @Tags 今日菜单
+// @Summary 今日菜单
+// @Description 今日菜单
+// @Tags 热门服务
 // @ID /cookbook/menus
 // @Accept  json
 // @Produce  json

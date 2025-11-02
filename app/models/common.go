@@ -27,7 +27,7 @@ type CreateBy struct {
 // 软删除
 type IsDeleted struct {
 	// 0 删除 1 使用中 2 归档中
-	IsDeleted int8 `json:"is_deleted" gorm:"default:1;index"`
+	IsDeleted int8 `json:"is_deleted" gorm:"default:0;index"`
 }
 
 type Description struct {

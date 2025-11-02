@@ -22,7 +22,7 @@ const docTemplate = `{
     "paths": {
         "/cookbook/menus": {
             "post": {
-                "description": "热门服务",
+                "description": "今日菜单",
                 "consumes": [
                     "application/json"
                 ],
@@ -30,9 +30,9 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "今日菜单"
+                    "热门服务"
                 ],
-                "summary": "热门服务",
+                "summary": "今日菜单",
                 "operationId": "/cookbook/menus",
                 "responses": {
                     "200": {
@@ -47,6 +47,86 @@ const docTemplate = `{
                                     "properties": {
                                         "data": {
                                             "$ref": "#/definitions/models.CookBook"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/park/count": {
+            "post": {
+                "description": "车位详情",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "热门服务"
+                ],
+                "summary": "车位详情",
+                "operationId": "/park/count",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/response.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/definitions/models.CookBook"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/park/create/{plateNumber}": {
+            "post": {
+                "description": "创建车辆出入记录",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "热门服务"
+                ],
+                "summary": "创建车辆出入记录",
+                "operationId": "/park/create",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "plateNumber",
+                        "name": "plateNumber",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/response.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/definitions/models.ParkRecord"
                                         }
                                     }
                                 }
@@ -201,6 +281,33 @@ const docTemplate = `{
                 },
                 "price": {
                     "type": "number"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.ParkRecord": {
+            "type": "object",
+            "properties": {
+                "created_at": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "in_time": {
+                    "type": "string"
+                },
+                "is_deleted": {
+                    "description": "0 删除 1 使用中 2 归档中",
+                    "type": "integer"
+                },
+                "out_time": {
+                    "type": "string"
+                },
+                "plate_number_id": {
+                    "type": "integer"
                 },
                 "updated_at": {
                     "type": "string"

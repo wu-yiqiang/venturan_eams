@@ -19,6 +19,24 @@ definitions:
       updated_at:
         type: string
     type: object
+  models.ParkRecord:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      in_time:
+        type: string
+      is_deleted:
+        description: 0 删除 1 使用中 2 归档中
+        type: integer
+      out_time:
+        type: string
+      plate_number_id:
+        type: integer
+      updated_at:
+        type: string
+    type: object
   models.User:
     properties:
       avatar:
@@ -124,7 +142,7 @@ paths:
     post:
       consumes:
       - application/json
-      description: 热门服务
+      description: 今日菜单
       operationId: /cookbook/menus
       produces:
       - application/json
@@ -138,9 +156,56 @@ paths:
                 data:
                   $ref: '#/definitions/models.CookBook'
               type: object
-      summary: 热门服务
+      summary: 今日菜单
       tags:
-      - 今日菜单
+      - 热门服务
+  /park/count:
+    post:
+      consumes:
+      - application/json
+      description: 车位详情
+      operationId: /park/count
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.CookBook'
+              type: object
+      summary: 车位详情
+      tags:
+      - 热门服务
+  /park/create/{plateNumber}:
+    post:
+      consumes:
+      - application/json
+      description: 创建车辆出入记录
+      operationId: /park/create
+      parameters:
+      - description: plateNumber
+        in: path
+        name: plateNumber
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.ParkRecord'
+              type: object
+      summary: 创建车辆出入记录
+      tags:
+      - 热门服务
   /user/{id}:
     delete:
       consumes:
