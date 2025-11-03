@@ -180,12 +180,12 @@ paths:
       summary: 车位详情
       tags:
       - 热门服务
-  /park/create/{plateNumber}:
+  /park/enter/{plateNumber}:
     post:
       consumes:
       - application/json
-      description: 创建车辆出入记录
-      operationId: /park/create
+      description: 入园记录
+      operationId: /park/enter
       parameters:
       - description: plateNumber
         in: path
@@ -203,7 +203,33 @@ paths:
                 data:
                   $ref: '#/definitions/models.ParkRecord'
               type: object
-      summary: 创建车辆出入记录
+      summary: 入园记录
+      tags:
+      - 热门服务
+  /park/exit/{plateNumber}:
+    post:
+      consumes:
+      - application/json
+      description: 出园记录
+      operationId: /park/exit
+      parameters:
+      - description: plateNumber
+        in: path
+        name: plateNumber
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.ParkRecord'
+              type: object
+      summary: 出园记录
       tags:
       - 热门服务
   /user/{id}:

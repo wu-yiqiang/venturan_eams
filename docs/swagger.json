@@ -84,9 +84,9 @@
                 }
             }
         },
-        "/park/create/{plateNumber}": {
+        "/park/enter/{plateNumber}": {
             "post": {
-                "description": "创建车辆出入记录",
+                "description": "入园记录",
                 "consumes": [
                     "application/json"
                 ],
@@ -96,8 +96,52 @@
                 "tags": [
                     "热门服务"
                 ],
-                "summary": "创建车辆出入记录",
-                "operationId": "/park/create",
+                "summary": "入园记录",
+                "operationId": "/park/enter",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "plateNumber",
+                        "name": "plateNumber",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/response.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/definitions/models.ParkRecord"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/park/exit/{plateNumber}": {
+            "post": {
+                "description": "出园记录",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "热门服务"
+                ],
+                "summary": "出园记录",
+                "operationId": "/park/exit",
                 "parameters": [
                     {
                         "type": "string",

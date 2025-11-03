@@ -16,11 +16,11 @@ var ParkService = new(parkService)
 
 func (parkService *parkService) ParkCountService() (data map[string]uint16, err error) {
 	var datas = make(map[string]uint16)
-	var remain int64
-	err = global.App.DB.Where("in_time is not null and out_time is null").Find(&models.ParkRecord{}).Count(&remain).Error
-	datas["remain"] = uint16(remain)
+	var used int64
+	err = global.App.DB.Where("in_time is not null and out_time is null").Find(&models.ParkRecord{}).Count(&used).Error
+	datas["used"] = uint16(used)
 	datas["sum"] = global.App.Config.App.ParkingSpaceCapacity
-	fmt.Println("parkService.ParkCountService()", err)
+	datas["remain"] = datas["sum"] - uint16(used)
 	if err != nil {
 		err = errors.New(serviceErrors.QueryError.Msg)
 		return datas, err
