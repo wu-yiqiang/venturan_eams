@@ -40110,3 +40110,485 @@ ORDER BY
 
 2025/11/04 01:07:13 /Users/atlas/go/src/venturan_eams/app/services/cookbook.go:18
 [1.311ms] [rows:4] SELECT * FROM `cook_books` WHERE created_at < '2025-11-04 01:07:13.246'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.587ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[4.727ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[4.296ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.123ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[3.890ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.868ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:27:24 
+[0.095ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 
+[0.328ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.895ms] [rows:4] 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'gin_gateway' 
+	AND TABLE_NAME = 'users' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2025/11/05 00:27:24 
+[0.093ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 
+[0.276ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 
+[0.504ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'gin_gateway' AND table_name = 'users' AND constraint_name = 'uni_users_email'
+
+2025/11/05 00:27:24 
+[0.074ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 
+[0.261ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 
+[0.391ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.079ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.228ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.358ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.061ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.215ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.344ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.059ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.229ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.368ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.057ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.222ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.435ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'departments' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.081ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.290ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.831ms] [rows:-] SELECT * FROM `departments` LIMIT 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.517ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'departments' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.097ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.298ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.427ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'departments' AND index_name = 'idx_departments_is_deleted'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.074ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.285ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.451ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'positions' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.083ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.280ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.517ms] [rows:-] SELECT * FROM `positions` LIMIT 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.525ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'positions' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.095ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.297ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.444ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'positions' AND index_name = 'idx_positions_is_deleted'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.072ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.278ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.475ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'cook_books' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.084ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.275ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.514ms] [rows:-] SELECT * FROM `cook_books` LIMIT 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.523ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'cook_books' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.098ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.487ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.453ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'cook_books' AND index_name = 'idx_cook_books_is_deleted'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.069ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.299ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.479ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'plate_numbers' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.077ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.293ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.108ms] [rows:-] SELECT * FROM `plate_numbers` LIMIT 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.591ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'plate_numbers' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.107ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.329ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.470ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'plate_numbers' AND index_name = 'idx_plate_numbers_is_deleted'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.088ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.323ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.487ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'park_records' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.083ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.300ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.563ms] [rows:-] SELECT * FROM `park_records` LIMIT 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.515ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'park_records' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.759ms] [rows:0] ALTER TABLE `park_records` MODIFY COLUMN `in_time` datetime NULL DEFAULT now()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.100ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.339ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:27:24 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.681ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'park_records' AND index_name = 'idx_park_records_is_deleted'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.163ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.153ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[2.235ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.234ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.822ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.539ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.716ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:32:14 
+[0.152ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 
+[0.592ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.284ms] [rows:4] 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'gin_gateway' 
+	AND TABLE_NAME = 'users' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2025/11/05 00:32:14 
+[0.104ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 
+[0.440ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 
+[0.736ms] [rows:-] SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'gin_gateway' AND table_name = 'users' AND constraint_name = 'uni_users_email'
+
+2025/11/05 00:32:14 
+[0.157ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 
+[0.545ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 
+[1.025ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.135ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.536ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.977ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.147ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.674ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.995ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.146ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.546ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.953ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND index_name = 'idx_users_is_deleted'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.140ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.560ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.139ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'departments' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.171ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.685ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.470ms] [rows:-] SELECT * FROM `departments` LIMIT 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.829ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'departments' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.653ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.661ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.886ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'departments' AND index_name = 'idx_departments_is_deleted'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.125ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.447ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.929ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'positions' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.124ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.441ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.358ms] [rows:-] SELECT * FROM `positions` LIMIT 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[1.037ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'positions' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.111ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.446ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.812ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'positions' AND index_name = 'idx_positions_is_deleted'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.123ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.374ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.536ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'cook_books' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.089ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.309ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.274ms] [rows:-] SELECT * FROM `cook_books` LIMIT 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.624ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'cook_books' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.084ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.274ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.438ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'cook_books' AND index_name = 'idx_cook_books_is_deleted'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.087ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.308ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.450ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'plate_numbers' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.068ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.274ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.214ms] [rows:-] SELECT * FROM `plate_numbers` LIMIT 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.491ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'plate_numbers' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.073ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.267ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.412ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'plate_numbers' AND index_name = 'idx_plate_numbers_is_deleted'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.069ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.274ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.446ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'park_records' AND table_type = 'BASE TABLE'
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.067ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.333ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.246ms] [rows:-] SELECT * FROM `park_records` LIMIT 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.665ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_gateway' AND table_name = 'park_records' ORDER BY ORDINAL_POSITION
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[3.197ms] [rows:0] ALTER TABLE `park_records` MODIFY COLUMN `in_time` datetime NULL DEFAULT now()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.109ms] [rows:-] SELECT DATABASE()
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.379ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2025/11/05 00:32:14 /Users/atlas/go/src/venturan_eams/bootstrap/db.go:61
+[0.616ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_gateway' AND table_name = 'park_records' AND index_name = 'idx_park_records_is_deleted'
