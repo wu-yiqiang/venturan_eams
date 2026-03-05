@@ -2,10 +2,11 @@ package bootstrap
 
 import (
 	"fmt"
-	"github.com/fsnotify/fsnotify"
-	"github.com/spf13/viper"
 	"os"
 	"venturan/global"
+
+	"github.com/fsnotify/fsnotify"
+	"github.com/spf13/viper"
 )
 
 func InitializeConfig() *viper.Viper {
@@ -41,6 +42,6 @@ func InitializeConfig() *viper.Viper {
 	if err := v.Unmarshal(&global.App.Config); err != nil {
 		fmt.Println(err)
 	}
-
+	fmt.Println("666")
 	return v
 }

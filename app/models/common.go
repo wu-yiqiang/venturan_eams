@@ -6,11 +6,11 @@ import (
 
 // 自增ID主键
 type ID struct {
-	ID uint `json:"id" gorm:"primaryKey"`
+	ID uint `json:"id" Gorm:"primaryKey"`
 }
 
 type Name struct {
-	Name string `json:"name" gorm:"not null;comment:字段名称"`
+	Name string `json:"name" Gorm:"not null;comment:字段名称"`
 }
 
 // 创建、更新时间

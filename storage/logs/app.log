@@ -503,3 +503,65 @@
 [2025-11-05 00:32:14.817]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
 [2025-11-05 00:57:01.651]	local.info	venturan_eams/main.go:23	log init success!
 [2025-11-05 00:57:01.694]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 11:21:24.433]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 11:21:24.438]	local.error	bootstrap/db.go:49	mysql connect failed, err:	{"err": "dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+[2026-03-05 11:21:24.444]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 11:26:55.718]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 11:26:55.723]	local.error	bootstrap/db.go:49	mysql connect failed, err:	{"err": "dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+[2026-03-05 11:26:55.724]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 11:53:25.978]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 11:53:26.111]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:32:42.465]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:32:42.496]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:35:13.781]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:35:13.868]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:36:35.861]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:36:35.904]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:39:46.842]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:39:47.158]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:39:51.178]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:39:51.211]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:40:00.174]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:40:00.210]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:40:06.720]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:40:06.756]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:40:46.842]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:40:46.879]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:41:21.017]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:41:21.053]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:41:59.929]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:41:59.962]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:42:36.896]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:42:36.931]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:42:59.182]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:42:59.219]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:44:36.761]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:44:37.178]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:44:56.307]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:44:56.574]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:45:12.064]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:45:12.096]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:45:22.833]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:45:22.880]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:46:06.446]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:46:06.620]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:46:34.402]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:46:34.469]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:46:58.799]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:46:58.845]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:47:02.699]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:47:02.737]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:47:10.136]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:47:10.181]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 12:47:27.156]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:47:27.212]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 12:47:37.697]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 12:47:37.741]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 14:44:24.944]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 14:44:25.023]	local.error	bootstrap/db.go:70	migrate table failed	{"err": "Error 1265 (01000): Data truncated for column 'description' at row 3"}
+[2026-03-05 14:44:47.690]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 14:44:47.743]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 14:59:18.661]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 14:59:18.687]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-05 16:13:27.010]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-05 16:13:27.044]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}

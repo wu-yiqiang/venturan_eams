@@ -2,9 +2,6 @@ package bootstrap
 
 import (
 	"context"
-	"github.com/gin-gonic/gin"
-	swaggerFiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
 	"log"
 	"net/http"
 	"os"
@@ -15,6 +12,10 @@ import (
 	"venturan/docs"
 	"venturan/global"
 	"venturan/routes"
+
+	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func setupRouter() *gin.Engine {
@@ -53,6 +54,10 @@ func setupRouter() *gin.Engine {
 	parkGroup := router.Group("/park")
 	{
 		routes.SetParkGroupRoutes(parkGroup)
+	}
+	menuGroup := router.Group("/menu")
+	{
+		routes.SetMenuGroupRoutes(menuGroup)
 	}
 	return router
 }

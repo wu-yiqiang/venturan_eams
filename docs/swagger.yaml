@@ -19,6 +19,22 @@ definitions:
       updated_at:
         type: string
     type: object
+  models.Menu:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      is_deleted:
+        description: 0 删除 1 使用中 2 归档中
+        type: integer
+      name:
+        type: string
+      updated_at:
+        type: string
+    type: object
   models.ParkRecord:
     properties:
       created_at:
@@ -159,6 +175,65 @@ paths:
       summary: 今日菜单
       tags:
       - 热门服务
+  /menu/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: 菜单删除
+      operationId: /menu/{id}
+      parameters:
+      - description: id
+        in: path
+        name: id
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: 菜单删除
+      tags:
+      - 菜单管理
+  /menu/list:
+    post:
+      consumes:
+      - application/json
+      description: 菜单列表
+      operationId: /menu/list
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Menu'
+              type: object
+      summary: 菜单列表
+      tags:
+      - 菜单管理
+  /menu/page:
+    post:
+      consumes:
+      - application/json
+      description: 菜单列表分页
+      operationId: /menu/page
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Menu'
+              type: object
+      summary: 菜单列表分页
+      tags:
+      - 菜单管理
   /park/count:
     post:
       consumes:

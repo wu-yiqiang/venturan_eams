@@ -3,7 +3,6 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"strconv"
 	"time"
 	"venturan/app/common/request"
@@ -12,6 +11,8 @@ import (
 	"venturan/global"
 	"venturan/global/serviceErrors"
 	"venturan/utils"
+
+	"github.com/gin-gonic/gin"
 )
 
 // @Summary 用户注册
@@ -23,7 +24,7 @@ import (
 // @Param body body request.Register true "body"
 // @Success 200 {object} response.Response{data=models.User} "success"
 // @Router /user/register [post]
-func Register(c *gin.Context) {
+func UserRegister(c *gin.Context) {
 	var form request.Register
 	if err := c.ShouldBindJSON(&form); err != nil {
 		response.Fail(c, request.GetErrorMsg(form, err))
@@ -45,7 +46,7 @@ func Register(c *gin.Context) {
 // @Param body body request.Login true "body"
 // @Success 200 {object} response.Response{data=models.User} "success"
 // @Router /user/login [post]
-func Login(c *gin.Context) {
+func UserLogin(c *gin.Context) {
 	var form request.Login
 	if err := c.ShouldBindJSON(&form); err != nil {
 		response.Fail(c, request.GetErrorMsg(form, err))
@@ -79,7 +80,7 @@ func Login(c *gin.Context) {
 // @Produce  json
 // @Param id path int 1 "id"
 // @Router /user/{id} [delete]
-func Delete(c *gin.Context) {
+func UserDelete(c *gin.Context) {
 	userId := c.Param("user_id")
 	if userId == "" {
 		response.Fail(c, serviceErrors.UserIdNotEmpty)
@@ -98,7 +99,7 @@ func Delete(c *gin.Context) {
 	response.Success(c, user)
 }
 
-func Info(c *gin.Context) {
+func UserInfo(c *gin.Context) {
 	err, user := services.UserService.GetUserInfo(c.Keys["id"].(string))
 	if err != nil {
 		// response.BusinessFail(c, err.Error())
@@ -107,7 +108,7 @@ func Info(c *gin.Context) {
 	response.Success(c, user)
 }
 
-func Logout(c *gin.Context) {
+func UserLogout(c *gin.Context) {
 	token := c.Request.Header.Get("Authorization")
 	err := services.UserService.UserLogout(token)
 	if err != nil {
