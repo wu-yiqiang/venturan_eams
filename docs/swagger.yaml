@@ -208,7 +208,9 @@ paths:
             - $ref: '#/definitions/response.Response'
             - properties:
                 data:
-                  $ref: '#/definitions/models.Menu'
+                  items:
+                    $ref: '#/definitions/models.Menu'
+                  type: array
               type: object
       summary: 菜单列表
       tags:
@@ -229,7 +231,9 @@ paths:
             - $ref: '#/definitions/response.Response'
             - properties:
                 data:
-                  $ref: '#/definitions/models.Menu'
+                  items:
+                    $ref: '#/definitions/models.Menu'
+                  type: array
               type: object
       summary: 菜单列表分页
       tags:

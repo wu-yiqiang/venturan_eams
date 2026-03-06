@@ -16,4 +16,6 @@ var (
 	QueryError               = response.Response{1010009, nil, "查询失败"}
 	CreateError              = response.Response{1010010, nil, "创建失败"}
 	UpdateError              = response.Response{1010011, nil, "更新失败"}
+	PageSizeIsNotEmpty       = response.Response{1010012, nil, "pageSize不能为空"}
+	PageNoIsNotEmpty         = response.Response{1010013, nil, "pageNo不能为空"}
 )

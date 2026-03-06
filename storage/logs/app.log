@@ -565,3 +565,17 @@
 [2026-03-05 14:59:18.687]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
 [2026-03-05 16:13:27.010]	local.info	venturan_eams/main.go:23	log init success!
 [2026-03-05 16:13:27.044]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-06 10:39:21.115]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-06 10:39:21.144]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-06 10:46:07.122]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-06 10:46:07.209]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-06 10:47:53.366]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-06 10:47:53.456]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-06 10:48:04.990]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-06 10:48:05.041]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-06 10:51:33.709]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-06 10:51:33.739]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-06 10:52:36.107]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-06 10:52:36.147]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}
+[2026-03-06 11:02:36.845]	local.info	venturan_eams/main.go:23	log init success!
+[2026-03-06 11:02:36.887]	local.error	bootstrap/cron.go:19	Cron task add failed, err:	{"err": "expected exactly 5 fields, found 6: [0 0 2 * * ?]"}

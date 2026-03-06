@@ -1,6 +1,11 @@
 package controllers
 
 import (
+	"venturan/app/common/request"
+	"venturan/app/common/response"
+	"venturan/app/services"
+	"venturan/global/serviceErrors"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -10,15 +15,19 @@ import (
 // @ID /menu/page
 // @Accept  json
 // @Produce  json
-// @Success 200 {object} response.Response{data=models.Menu} "success"
+// @Success 200 {object} response.Response{data=[]models.Menu} "success"
 // @Router /menu/page [post]
 func MenuPages(c *gin.Context) {
-	//parkCount, err := services.ParkService.ParkCountService()
-	//if err != nil {
-	//	response.Fail(c, serviceErrors.QueryError)
-	//	return
-	//}
-	//response.Success(c, parkCount)
+	var form request.MenuPage
+	if err := c.ShouldBindJSON(&form); err != nil {
+		response.Fail(c, request.GetErrorMsg(form, err))
+		return
+	}
+	if err, user := services.UserService.Register(form); err != nil {
+		response.Fail(c, serviceErrors.UserCreateFailed)
+	} else {
+		response.Success(c, user)
+	}
 }
 
 // @Summary 菜单列表
@@ -27,7 +36,7 @@ func MenuPages(c *gin.Context) {
 // @ID /menu/list
 // @Accept  json
 // @Produce json
-// @Success 200 {object} response.Response{data=models.Menu} "success"
+// @Success 200 {object} response.Response{data=[]models.Menu} "success"
 // @Router /menu/list [post]
 func MenuLists(c *gin.Context) {
 	//plateNumber := c.Param("plateNumber")
