@@ -55321,3 +55321,189 @@ ORDER BY
 
 2026/03/09 18:22:02 D:/pro/venturan_eams/bootstrap/db.go:62
 [28.282ms] [rows:0] CREATE TABLE `park_records` (`id` bigint unsigned AUTO_INCREMENT,`plate_number_id` bigint unsigned,`in_time` datetime NULL,`out_time` datetime NULL,`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` tinyint DEFAULT 0,PRIMARY KEY (`id`),INDEX `idx_park_records_is_deleted` (`is_deleted`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[1.021ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.511ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[19.474ms] [rows:0] CREATE TABLE `users` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191),`nick_name` varchar(191),`email` varchar(191),`password` varchar(191),`avatar` varchar(191),`mobile` varchar(191),`employ_date` varchar(191),`resign_date` varchar(191),`department_id` bigint unsigned,`department_name` varchar(191),`position_id` bigint unsigned,`position_name` varchar(191),`description` varchar(2500),`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` tinyint DEFAULT 0,PRIMARY KEY (`id`),INDEX `idx_users_is_deleted` (`is_deleted`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.613ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'roles' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[18.066ms] [rows:0] CREATE TABLE `roles` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191),`code` varchar(191),`description` varchar(2500),`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` tinyint DEFAULT 0,PRIMARY KEY (`id`),INDEX `idx_roles_is_deleted` (`is_deleted`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.505ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'user_role' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[8.130ms] [rows:0] CREATE TABLE `user_role` (`role_id` bigint unsigned,`user_id` bigint unsigned,PRIMARY KEY (`role_id`,`user_id`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.579ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'buttons' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[18.698ms] [rows:0] CREATE TABLE `buttons` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191),`code` varchar(191),`description` varchar(2500),`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` tinyint DEFAULT 0,PRIMARY KEY (`id`),INDEX `idx_buttons_is_deleted` (`is_deleted`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.637ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'role_button' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[8.515ms] [rows:0] CREATE TABLE `role_button` (`button_id` bigint unsigned,`role_id` bigint unsigned,PRIMARY KEY (`button_id`,`role_id`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.586ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'menus' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[19.964ms] [rows:0] CREATE TABLE `menus` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191),`code` varchar(191),`path` varchar(191),`parent_menu_id` bigint unsigned,`menu_status` bigint unsigned,`icon_name` varchar(191),`description` varchar(2500),`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` tinyint DEFAULT 0,PRIMARY KEY (`id`),INDEX `idx_menus_is_deleted` (`is_deleted`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'role_menu' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[8.404ms] [rows:0] CREATE TABLE `role_menu` (`menu_id` bigint unsigned,`role_id` bigint unsigned,PRIMARY KEY (`menu_id`,`role_id`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.584ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'departments' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[16.725ms] [rows:0] CREATE TABLE `departments` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191),`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` tinyint DEFAULT 0,PRIMARY KEY (`id`),INDEX `idx_departments_is_deleted` (`is_deleted`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.598ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'positions' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[17.774ms] [rows:0] CREATE TABLE `positions` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191),`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` tinyint DEFAULT 0,PRIMARY KEY (`id`),INDEX `idx_positions_is_deleted` (`is_deleted`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.568ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'cook_books' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[18.012ms] [rows:0] CREATE TABLE `cook_books` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191),`price` float,`image` varchar(191),`description` varchar(2500),`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` tinyint DEFAULT 0,PRIMARY KEY (`id`),INDEX `idx_cook_books_is_deleted` (`is_deleted`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'plate_numbers' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[22.116ms] [rows:0] CREATE TABLE `plate_numbers` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191),`user_id` bigint unsigned,`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` tinyint DEFAULT 0,PRIMARY KEY (`id`),INDEX `idx_plate_numbers_is_deleted` (`is_deleted`))
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.506ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_gateway%' ORDER BY SCHEMA_NAME='gin_gateway' DESC,SCHEMA_NAME limit 1
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[0.515ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_gateway' AND table_name = 'park_records' AND table_type = 'BASE TABLE'
+
+2026/03/09 18:23:17 D:/pro/venturan_eams/bootstrap/db.go:62
+[24.108ms] [rows:0] CREATE TABLE `park_records` (`id` bigint unsigned AUTO_INCREMENT,`plate_number_id` bigint unsigned,`in_time` datetime NULL,`out_time` datetime NULL,`created_at` datetime NULL,`updated_at` datetime NULL,`is_deleted` tinyint DEFAULT 0,PRIMARY KEY (`id`),INDEX `idx_park_records_is_deleted` (`is_deleted`))
+
+2026/03/09 18:23:38 D:/pro/venturan_eams/app/services/user.go:35
+[0.000ms] [rows:2] SELECT * FROM `user_role` WHERE `user_role`.`user_id` = 1
+
+2026/03/09 18:23:38 D:/pro/venturan_eams/app/services/user.go:35
+[1.040ms] [rows:18] SELECT * FROM `role_button` WHERE `role_button`.`role_id` IN (1,2)
+
+2026/03/09 18:23:38 D:/pro/venturan_eams/app/services/user.go:35
+[0.519ms] [rows:18] SELECT * FROM `buttons` WHERE `buttons`.`id` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18)
+
+2026/03/09 18:23:38 D:/pro/venturan_eams/app/services/user.go:35
+[0.000ms] [rows:7] SELECT * FROM `role_menu` WHERE `role_menu`.`role_id` IN (1,2)
+
+2026/03/09 18:23:38 D:/pro/venturan_eams/app/services/user.go:35
+[1.038ms] [rows:7] SELECT * FROM `menus` WHERE `menus`.`id` IN (1,2,3,4,5,6,7)
+
+2026/03/09 18:23:38 D:/pro/venturan_eams/app/services/user.go:35
+[2.598ms] [rows:2] SELECT * FROM `roles` WHERE `roles`.`id` IN (1,2)
+
+2026/03/09 18:23:38 D:/pro/venturan_eams/app/services/user.go:35
+[4.386ms] [rows:1] SELECT * FROM `users` WHERE email = 'sutter.wu@itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
+
+2026/03/09 18:33:53 D:/pro/venturan_eams/app/services/user.go:35
+[0.636ms] [rows:2] SELECT * FROM `user_role` WHERE `user_role`.`user_id` = 1
+
+2026/03/09 18:33:53 D:/pro/venturan_eams/app/services/user.go:35
+[0.000ms] [rows:18] SELECT * FROM `role_button` WHERE `role_button`.`role_id` IN (1,2)
+
+2026/03/09 18:33:53 D:/pro/venturan_eams/app/services/user.go:35
+[0.000ms] [rows:18] SELECT * FROM `buttons` WHERE `buttons`.`id` IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18)
+
+2026/03/09 18:33:53 D:/pro/venturan_eams/app/services/user.go:35
+[0.000ms] [rows:7] SELECT * FROM `role_menu` WHERE `role_menu`.`role_id` IN (1,2)
+
+2026/03/09 18:33:53 D:/pro/venturan_eams/app/services/user.go:35
+[0.622ms] [rows:7] SELECT * FROM `menus` WHERE `menus`.`id` IN (1,2,3,4,5,6,7)
+
+2026/03/09 18:33:53 D:/pro/venturan_eams/app/services/user.go:35
+[2.278ms] [rows:2] SELECT * FROM `roles` WHERE `roles`.`id` IN (1,2)
+
+2026/03/09 18:33:53 D:/pro/venturan_eams/app/services/user.go:35
+[3.856ms] [rows:1] SELECT * FROM `users` WHERE email = 'sutter.wu@itforce-tech.com' ORDER BY `users`.`id` LIMIT 1
