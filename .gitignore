@@ -22,4 +22,4 @@ rad.json
 TestResults.xml
 *.log
 /vendor/
-.log
+/logs/*.log

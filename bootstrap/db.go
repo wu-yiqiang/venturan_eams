@@ -61,12 +61,14 @@ func initMySqlGorm() *gorm.DB {
 func initMySqlTables(db *gorm.DB) {
 	err := db.AutoMigrate(
 		models.User{},
+		models.Role{},
+		models.Menu{},
+		models.Button{},
 		models.Department{},
 		models.Position{},
 		models.CookBook{},
 		models.PlateNumber{},
 		models.ParkRecord{},
-		models.Menu{},
 	)
 	if err != nil {
 		global.App.Log.Error("migrate table failed", zap.Any("err", err))

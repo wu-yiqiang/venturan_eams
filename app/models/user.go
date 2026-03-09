@@ -16,6 +16,8 @@ type User struct {
 	DepartmentName string `Gorm:"->" json:"department_name"`
 	PositionId     uint   `json:"position_id"`
 	PositionName   string `Gorm:"->" json:"position_name"`
+	Roles          []Role `gorm:"many2many:user_role;" json:"roles"`
+	Description
 	Timestamps
 	IsDeleted
 }

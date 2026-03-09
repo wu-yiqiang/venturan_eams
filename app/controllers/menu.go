@@ -3,8 +3,6 @@ package controllers
 import (
 	"venturan/app/common/request"
 	"venturan/app/common/response"
-	"venturan/app/services"
-	"venturan/global/serviceErrors"
 
 	"github.com/gin-gonic/gin"
 )
@@ -23,11 +21,11 @@ func MenuPages(c *gin.Context) {
 		response.Fail(c, request.GetErrorMsg(form, err))
 		return
 	}
-	if err, user := services.UserService.Register(form); err != nil {
-		response.Fail(c, serviceErrors.UserCreateFailed)
-	} else {
-		response.Success(c, user)
-	}
+	//if err, user := services.UserService.Register(form); err != nil {
+	//	response.Fail(c, serviceErrors.UserCreateFailed)
+	//} else {
+	//	response.Success(c, user)
+	//}
 }
 
 // @Summary 菜单列表

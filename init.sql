@@ -1,13 +1,55 @@
 use gin_gateway;
 -- user表数据
-insert into `users` (`id`, `name`, `nick_name`, `email`,`password`, `avatar`, `mobile`, `employ_date`,`resign_date` ,`department_id`,`position_id`,
+insert into `users` (`id`, `name`, `nick_name`, `email`,`password`, `avatar`, `mobile`, `employ_date`,`resign_date` ,`department_id`,`position_id`, `description`,
                      `created_at`, `updated_at`, `is_deleted`)
 values ('1', 'Sutter Wu', 'sutter', 'sutter.wu@itforce-tech.com', '$2a$04$toEgtXNyEIVIcsBD8RJkEONlfBU37l65pTwjcLsfuOgNvZp4tbd4C','https://youke1.picui.cn/s1/2025/10/25/68fc6b8106bed.jpeg', '18862857104', '2024-08-08', '2024-12-10',1,
-        1, '2024-08-08', '2024-08-08', 0);
+        1,'啦啦啦', '2024-08-08', '2024-08-08', 0);
 insert into `users` (`id`, `name`, `nick_name`, `email`,`password`, `avatar`, `mobile`, `employ_date`,`resign_date`, `department_id`,`position_id`,
-                     `created_at`, `updated_at`, `is_deleted`)
+                        `description`,`created_at`, `updated_at`, `is_deleted`)
 values ('2', 'sutter2', 'sutter2', 'sutter2.wu@itforce-tech.com', '$2a$04$toEgtXNyEIVIcsBD8RJkEONlfBU37l65pTwjcLsfuOgNvZp4tbd4C','https://youke1.picui.cn/s1/2025/10/25/68fc6b8106bed.jpeg', '18862857104', '2024-08-08', '2024-08-10',1,
-        1, '2024-08-08', '2024-08-08', 0);
+        1, '666','2024-08-08', '2024-08-08', 0);
+
+-- 角色表
+insert into `roles` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (1, '超级管理员', 'administrator','超级管理员', '2024-08-08 17:23:00','2024-08-08 08:00:23',  0);
+insert into `roles` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (2, '系统管理员', 'System Administrator', '系统管理员','2024-08-08 17:23:00','2024-08-08 08:00:23',  0);
+
+-- 用户角色表
+insert into `user_role` (`user_id`, `role_id`) values ( 1, 1);
+insert into `user_role` (`user_id`, `role_id`) values ( 1, 2);
+
+-- 菜单表
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (1, '个人中心', 'personal', '/personal',0,1,'HomeOutlined','个人中心','2024-08-08 17:23:00','2024-08-08 08:00:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (2, '系统看板', 'dashboard', '/dashboard',0,1,'AreaChartOutlined','系统看板','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (3, '系统设置', 'systems', '/systems',0,1,'SettingOutlined','系统设置','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (4, '用户管理', 'users', '/systems/users',3,1,'SettingOutlined','用户管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (5, '角色管理', 'roles', '/systems/roles',3,1,'TeamOutlined','角色管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (6, '菜单管理', 'menus', '/systems/menus',3,1,'MenuOutlined','菜单管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (7, '按钮管理', 'buttons', '/systems/buttons',3,1,'MenuUnfoldOutlined','按钮管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+
+-- 角色菜单表
+-- insert into `role_menu` (`id`, `role_id`, `menu_id`,`created_at`, `updated_at`, `is_deleted`) values (1, 1, 1, '2024-08-08 17:23:00','2024-08-08 08:00:23',  0);
+-- insert into `role_menu` (`id`, `role_id`, `menu_id`,`created_at`, `updated_at`, `is_deleted`) values (1, 1, 2, '2024-08-08 17:23:00','2024-08-08 08:00:23',  0);
+
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 1);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 2);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 3);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 4);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 5);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 6);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 7);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -- 部门表
 insert into `departments` (`id`, `name`, `created_at`, `updated_at`, `is_deleted`) values ('1', '人事行政部', '2024-08-08', '2024-09-10', 0);

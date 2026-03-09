@@ -13,6 +13,10 @@ type Name struct {
 	Name string `json:"name" Gorm:"not null;comment:字段名称"`
 }
 
+type Code struct {
+	Code string `json:"code" Gorm:"not null;comment:唯一编码"`
+}
+
 // 创建、更新时间
 type Timestamps struct {
 	CreatedAt time.Time `json:"created_at"`
