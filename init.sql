@@ -38,7 +38,45 @@ insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 5);
 insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 6);
 insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 7);
 
+-- 按钮表
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (1, '添加用户', 'system:user:create', '添加用户','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (2, '添加角色', 'system:role:create', '添加角色','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (3, '添加菜单', 'system:menu:create', '添加菜单','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (4, '添加按钮', 'system:button:create', '添加按钮','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (5, '添加字典', 'system:dictionary:create', '添加字典','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (6, '添加接口', 'system:connector:create', '添加接口','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (7, '编辑用户', 'system:user:edit', '编辑用户','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (8, '编辑角色', 'system:role:edit', '编辑角色','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (9, '编辑菜单', 'system:menu:edit', '编辑菜单','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (10, '编辑按钮', 'system:button:edit', '编辑按钮','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (11, '编辑字典', 'system:dictionary:edit', '编辑字典','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (12, '编辑接口', 'system:connector:edit', '编辑接口','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (13, '删除用户', 'system:user:delete', '删除用户','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (14, '删除角色', 'system:role:delete', '删除角色','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (15, '删除菜单', 'system:menu:delete', '删除菜单','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (16, '删除按钮', 'system:button:delete', '删除按钮','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (17, '删除字典', 'system:dictionary:delete', '删除字典','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (18, '删除接口', 'system:connector:delete', '删除接口','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 
+-- 角色按钮表
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 1);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 2);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 3);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 4);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 5);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 6);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 7);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 8);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 9);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 10);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 11);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 12);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 13);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 14);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 15);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 16);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 17);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 18);
 
 
 
