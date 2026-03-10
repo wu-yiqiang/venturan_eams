@@ -330,6 +330,56 @@ const docTemplate = `{
                 }
             }
         },
+        "/user/page": {
+            "post": {
+                "description": "用户分页查询",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户管理"
+                ],
+                "summary": "用户分页查询",
+                "operationId": "/user/page",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.UserPageQueryForm"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/response.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/models.User"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
         "/user/register": {
             "post": {
                 "description": "用户注册",
@@ -404,6 +454,69 @@ const docTemplate = `{
         }
     },
     "definitions": {
+        "models.Button": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "is_deleted": {
+                    "description": "0 删除 1 使用中 2 归档中",
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "roles": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.Role"
+                    }
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Connector": {
+            "type": "object",
+            "properties": {
+                "created_at": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "is_deleted": {
+                    "description": "0 删除 1 使用中 2 归档中",
+                    "type": "integer"
+                },
+                "method": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
         "models.CookBook": {
             "type": "object",
             "properties": {
@@ -437,10 +550,16 @@ const docTemplate = `{
         "models.Menu": {
             "type": "object",
             "properties": {
+                "code": {
+                    "type": "string"
+                },
                 "created_at": {
                     "type": "string"
                 },
                 "description": {
+                    "type": "string"
+                },
+                "iconName": {
                     "type": "string"
                 },
                 "id": {
@@ -450,8 +569,23 @@ const docTemplate = `{
                     "description": "0 删除 1 使用中 2 归档中",
                     "type": "integer"
                 },
+                "menuStatus": {
+                    "type": "integer"
+                },
                 "name": {
                     "type": "string"
+                },
+                "parentMenuId": {
+                    "type": "integer"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "roles": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.Role"
+                    }
                 },
                 "updated_at": {
                     "type": "string"
@@ -485,6 +619,57 @@ const docTemplate = `{
                 }
             }
         },
+        "models.Role": {
+            "type": "object",
+            "properties": {
+                "buttons": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.Button"
+                    }
+                },
+                "code": {
+                    "type": "string"
+                },
+                "connectors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.Connector"
+                    }
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "is_deleted": {
+                    "description": "0 删除 1 使用中 2 归档中",
+                    "type": "integer"
+                },
+                "menus": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.Menu"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                },
+                "users": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.User"
+                    }
+                }
+            }
+        },
         "models.User": {
             "type": "object",
             "properties": {
@@ -498,6 +683,9 @@ const docTemplate = `{
                     "type": "integer"
                 },
                 "department_name": {
+                    "type": "string"
+                },
+                "description": {
                     "type": "string"
                 },
                 "email": {
@@ -530,6 +718,12 @@ const docTemplate = `{
                 },
                 "resign_date": {
                     "type": "string"
+                },
+                "roles": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.Role"
+                    }
                 },
                 "updated_at": {
                     "type": "string"
@@ -596,6 +790,27 @@ const docTemplate = `{
                 "position_id": {
                     "type": "integer",
                     "example": 1
+                }
+            }
+        },
+        "request.UserPageQueryForm": {
+            "type": "object",
+            "required": [
+                "pageNo",
+                "pageSize"
+            ],
+            "properties": {
+                "pageNo": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "pageSize": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "search": {
+                    "type": "string",
+                    "example": ""
                 }
             }
         },

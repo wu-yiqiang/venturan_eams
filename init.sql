@@ -25,6 +25,8 @@ insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status
 insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (5, '角色管理', 'roles', '/systems/roles',3,1,'TeamOutlined','角色管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (6, '菜单管理', 'menus', '/systems/menus',3,1,'MenuOutlined','菜单管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (7, '按钮管理', 'buttons', '/systems/buttons',3,1,'MenuUnfoldOutlined','按钮管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (8, '字典管理', 'mappings', '/systems/mappings',3,1,'SafetyOutlined','字典管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (9, '接口管理', 'connectors', '/systems/connectors',3,1,'SafetyOutlined','接口管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 
 -- 角色菜单表
 -- insert into `role_menu` (`id`, `role_id`, `menu_id`,`created_at`, `updated_at`, `is_deleted`) values (1, 1, 1, '2024-08-08 17:23:00','2024-08-08 08:00:23',  0);
@@ -37,25 +39,26 @@ insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 4);
 insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 5);
 insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 6);
 insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 7);
-
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 8);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 9);
 -- 按钮表
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (1, '添加用户', 'system:user:create', '添加用户','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (2, '添加角色', 'system:role:create', '添加角色','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (3, '添加菜单', 'system:menu:create', '添加菜单','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (4, '添加按钮', 'system:button:create', '添加按钮','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
-insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (5, '添加字典', 'system:dictionary:create', '添加字典','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (5, '添加字典', 'system:mapping:create', '添加字典','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (6, '添加接口', 'system:connector:create', '添加接口','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (7, '编辑用户', 'system:user:edit', '编辑用户','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (8, '编辑角色', 'system:role:edit', '编辑角色','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (9, '编辑菜单', 'system:menu:edit', '编辑菜单','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (10, '编辑按钮', 'system:button:edit', '编辑按钮','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
-insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (11, '编辑字典', 'system:dictionary:edit', '编辑字典','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (11, '编辑字典', 'system:mapping:edit', '编辑字典','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (12, '编辑接口', 'system:connector:edit', '编辑接口','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (13, '删除用户', 'system:user:delete', '删除用户','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (14, '删除角色', 'system:role:delete', '删除角色','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (15, '删除菜单', 'system:menu:delete', '删除菜单','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (16, '删除按钮', 'system:button:delete', '删除按钮','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
-insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (17, '删除字典', 'system:dictionary:delete', '删除字典','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (17, '删除字典', 'system:mapping:delete', '删除字典','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (18, '删除接口', 'system:connector:delete', '删除接口','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 
 -- 角色按钮表
@@ -78,6 +81,97 @@ insert into `role_button` (`role_id`, `button_id`) values ( 1, 16);
 insert into `role_button` (`role_id`, `button_id`) values ( 1, 17);
 insert into `role_button` (`role_id`, `button_id`) values ( 1, 18);
 
+-- 接口表
+insert into `connectors` (`id`, `name`, `method`, `path`,`description`, `created_at`, `updated_at`,  `is_deleted`)
+values (1, '查询用户列表', 1, '/user/page','查询用户列表','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (2, '添加用户', 2,'/user/create', '添加用户','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (3, '删除用户', 3, '/user/delete','删除用户','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (4, '编辑用户', 2,'/user/update', '编辑用户', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (5, '查询全量用户', 1,'/user/list', '查询全量用户','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (6, '查询用户详情',1,'/user/detail', '查询用户详情','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (7, '查询角色列表',1,'/role/page', '查询角色列表','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (8, '添加角色',2,'/role/create', '添加角色','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (9, '删除角色',3,'/role/delete', '删除角色','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (10, '编辑角色',2,'/role/update', '编辑角色','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (11, '查询全量角色', 1,'/role/list', '查询全量角色','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (12, '查询角色详情',1,'/role/detail', '查询角色详情','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (13, '查询菜单列表',1,'/menu/page', '查询菜单列表','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (14, '添加菜单',2,'/menu/create', '添加菜单','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (15, '删除菜单',3,'/menu/delete', '删除菜单','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (16, '编辑菜单',2,'/menu/update', '编辑菜单','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (17, '查询全量菜单', 1,'/menu/list', '查询全量菜单','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (18, '查询菜单详情',1,'/menu/detail', '查询菜单详情','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (19, '查询菜单树形列表',1,'/menu/treeLists', '查询菜单树形列表','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (20, '查询接口列表',1,'/connector/page', '查询接口列表','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (21, '添加接口',2,'/connector/create', '添加接口', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (22, '删除接口',3,'/connector/delete', '删除接口', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (23, '编辑接口',2,'/connector/update', '编辑接口','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (24, '查询全量接口', 1,'/connector/list', '查询全量接口','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (25, '查询接口详情',1,'/connector/detail', '查询菜单详情','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (26, '查询字典列表',1,'/mapping/page', '查询字典列表','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (27, '添加字典',2,'/mapping/create', '添加字典','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (28, '删除字典',3,'/mapping/delete', '删除字典', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (29, '编辑字典',2,'/mapping/update', '编辑字典', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (30, '查询全量字典类型', 1,'/mapping/types', '查询全量字典类型','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (31, '查询字典详情',1,'/mapping/detail', '查询字典详情', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (32, '查询按钮列表',1,'/button/page', '查询按钮列表', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (33, '添加按钮',2,'/button/create', '添加按钮','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (34, '删除按钮',3,'/button/delete', '删除按钮', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (35, '编辑按钮',2,'/button/update', '编辑按钮','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (36, '编辑按钮',2,'/button/update', '编辑按钮','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (37, '查询全量按钮', 1,'/button/list', '查询全量按钮', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (38, '查询按钮详情',1,'/button/detail', '查询按钮详情','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0);
+
+
+-- 角色接口表
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 1);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 2);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 3);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 4);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 5);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 6);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 7);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 8);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 9);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 10);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 11);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 12);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 13);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 14);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 15);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 16);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 17);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 18);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 19);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 20);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 21);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 22);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 23);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 24);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 25);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 26);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 27);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 28);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 29);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 30);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 31);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 32);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 33);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 34);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 35);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 36);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 37);
+insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 38);
+-- 字典表
+insert into `mappings` (`id`, `code`,`value`,  `name`,   `color`, `background_color`,`description`, `created_at`, `updated_at`,  `is_deleted`)
+values (1, 'status', 0,'禁用', '','','禁用','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (2, 'status', 1, '启用','','', '启用','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (3, 'menuType',1, '目录','','', '目录', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (4, 'menuType',2, '菜单','','', '菜单','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (5, 'connectorType',1,'GET','','', 'GET','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (6, 'connectorType',2,'POST','','', 'POST', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (7, 'connectorType',3,'DELETE','','', 'DELETE','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (8, 'connectorType',4,'PUT','','', 'PUT','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0);
 
 
 

@@ -1,4 +1,46 @@
 definitions:
+  models.Button:
+    properties:
+      code:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      is_deleted:
+        description: 0 删除 1 使用中 2 归档中
+        type: integer
+      name:
+        type: string
+      roles:
+        items:
+          $ref: '#/definitions/models.Role'
+        type: array
+      updated_at:
+        type: string
+    type: object
+  models.Connector:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      is_deleted:
+        description: 0 删除 1 使用中 2 归档中
+        type: integer
+      method:
+        type: integer
+      name:
+        type: string
+      path:
+        type: string
+      updated_at:
+        type: string
+    type: object
   models.CookBook:
     properties:
       created_at:
@@ -21,17 +63,31 @@ definitions:
     type: object
   models.Menu:
     properties:
+      code:
+        type: string
       created_at:
         type: string
       description:
+        type: string
+      iconName:
         type: string
       id:
         type: integer
       is_deleted:
         description: 0 删除 1 使用中 2 归档中
         type: integer
+      menuStatus:
+        type: integer
       name:
         type: string
+      parentMenuId:
+        type: integer
+      path:
+        type: string
+      roles:
+        items:
+          $ref: '#/definitions/models.Role'
+        type: array
       updated_at:
         type: string
     type: object
@@ -53,6 +109,40 @@ definitions:
       updated_at:
         type: string
     type: object
+  models.Role:
+    properties:
+      buttons:
+        items:
+          $ref: '#/definitions/models.Button'
+        type: array
+      code:
+        type: string
+      connectors:
+        items:
+          $ref: '#/definitions/models.Connector'
+        type: array
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      is_deleted:
+        description: 0 删除 1 使用中 2 归档中
+        type: integer
+      menus:
+        items:
+          $ref: '#/definitions/models.Menu'
+        type: array
+      name:
+        type: string
+      updated_at:
+        type: string
+      users:
+        items:
+          $ref: '#/definitions/models.User'
+        type: array
+    type: object
   models.User:
     properties:
       avatar:
@@ -62,6 +152,8 @@ definitions:
       department_id:
         type: integer
       department_name:
+        type: string
+      description:
         type: string
       email:
         type: string
@@ -84,6 +176,10 @@ definitions:
         type: string
       resign_date:
         type: string
+      roles:
+        items:
+          $ref: '#/definitions/models.Role'
+        type: array
       updated_at:
         type: string
     type: object
@@ -132,6 +228,21 @@ definitions:
     - email
     - name
     - password
+    type: object
+  request.UserPageQueryForm:
+    properties:
+      pageNo:
+        example: 1
+        type: integer
+      pageSize:
+        example: 10
+        type: integer
+      search:
+        example: ""
+        type: string
+    required:
+    - pageNo
+    - pageSize
     type: object
   response.Response:
     properties:
@@ -354,6 +465,36 @@ paths:
                   $ref: '#/definitions/models.User'
               type: object
       summary: 用户登陆
+      tags:
+      - 用户管理
+  /user/page:
+    post:
+      consumes:
+      - application/json
+      description: 用户分页查询
+      operationId: /user/page
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.UserPageQueryForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.User'
+                  type: array
+              type: object
+      summary: 用户分页查询
       tags:
       - 用户管理
   /user/register:

@@ -37,3 +37,16 @@ func (login Login) GetMessages() ValidatorMessages {
 		"password.required": serviceErrors.UserPasswordIsNotEmpty,
 	}
 }
+
+type UserPageQueryForm struct {
+	Search   string `form:"search" json:"search" example:""`
+	PageSize int    `form:"pageSize" json:"pageSize" example:"10" binding:"required"`
+	PageNo   int    `form:"pageNo" json:"pageNo" example:"1" binding:"required"`
+}
+
+func (userPageQueryForm UserPageQueryForm) GetMessages() ValidatorMessages {
+	return ValidatorMessages{
+		"pageNo.required":   serviceErrors.PageNoIsNotEmpty,
+		"pageSize.required": serviceErrors.PageSizeIsNotEmpty,
+	}
+}

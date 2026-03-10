@@ -117,3 +117,29 @@ func UserLogout(c *gin.Context) {
 	}
 	response.Success(c, nil)
 }
+
+// @Summary 用户分页查询
+// @Description 用户分页查询
+// @Tags 用户管理
+// @ID /user/page
+// @Accept  json
+// @Produce  json
+// @Router /user/page [post]
+// @Param body body request.UserPageQueryForm true "body"
+// @Success 200 {object} response.Response{data=[]models.User} "success"
+func UserPage(c *gin.Context) {
+	var userPageQueryForm request.UserPageQueryForm
+	//var paginationResult services.PaginationResult
+	if err := c.ShouldBindJSON(&userPageQueryForm); err != nil {
+		response.Fail(c, request.GetErrorMsg(userPageQueryForm, err))
+		return
+	}
+	err, paginationResult := services.UserService.UserPage(userPageQueryForm)
+	if err != nil {
+		response.Fail(c, serviceErrors.UserIsNotExistOrPasswordError)
+		return
+	}
+	response.Success(c, paginationResult)
+}
+
+func UserList(c *gin.Context) {}

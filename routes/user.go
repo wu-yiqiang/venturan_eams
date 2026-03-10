@@ -17,5 +17,7 @@ func SetUserGroupRoutes(router *gin.RouterGroup) {
 		authRouter.DELETE("/:user_id", controllers.UserDelete)
 		authRouter.POST("/info", controllers.UserInfo)
 		authRouter.POST("/logout", controllers.UserLogout)
+		authRouter.POST("/page", controllers.UserPage)
+		authRouter.POST("/lists", controllers.UserList)
 	}
 }

@@ -80,3 +80,13 @@ func (userService *userService) FindUserByPlateNumber(plateNumber string) (err e
 	}
 	return nil, user
 }
+
+func (userService *userService) UserPage(params request.UserPageQueryForm) (err error, results *PaginationResult) {
+	var users []models.User
+	query := global.App.DB.Scopes(QueryIsNoeDeleted).Where("name LIKE ? OR nick_name LIKE ? OR email LIKE ?", "%"+params.Search+"%", "%"+params.Search+"%", "%"+params.Search+"%").Find(&users)
+	userPageResults, err := Pagination(query, params.PageNo, params.PageSize, &users)
+	if err != nil {
+		return
+	}
+	return nil, userPageResults
+}
