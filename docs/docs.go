@@ -56,6 +56,214 @@ const docTemplate = `{
                 }
             }
         },
+        "/mapping/create": {
+            "post": {
+                "description": "字典创建",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "字典管理"
+                ],
+                "summary": "字典创建",
+                "operationId": "/mapping/create",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.MappingCreate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "$ref": "#/definitions/response.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/mapping/delete/{mappingId}": {
+            "delete": {
+                "description": "字典删除",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "字典管理"
+                ],
+                "summary": "字典删除",
+                "operationId": "/mapping/delete/{mappingId}",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "mappingId",
+                        "name": "mappingId",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "$ref": "#/definitions/response.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/mapping/details/{mappingId}": {
+            "get": {
+                "description": "字典详情",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "字典管理"
+                ],
+                "summary": "字典详情",
+                "operationId": "/mapping/details/{mappingId}",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "mappingId",
+                        "name": "mappingId",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/response.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/definitions/models.Mapping"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/mapping/page": {
+            "post": {
+                "description": "字典分页查询",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "字典管理"
+                ],
+                "summary": "字典分页查询",
+                "operationId": "/mapping/page",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.CommonPageQueryForm"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/response.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/models.Mapping"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/mapping/update": {
+            "post": {
+                "description": "字典更新",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "字典管理"
+                ],
+                "summary": "字典更新",
+                "operationId": "/mapping/update",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.MappingCreate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/response.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/definitions/models.Mapping"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
         "/menu/list": {
             "post": {
                 "description": "菜单列表",
@@ -283,6 +491,56 @@ const docTemplate = `{
                 }
             }
         },
+        "/role/page": {
+            "post": {
+                "description": "角色分页查询",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "角色管理"
+                ],
+                "summary": "角色分页查询",
+                "operationId": "/role/page",
+                "parameters": [
+                    {
+                        "description": "body",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.CommonPageQueryForm"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/response.Response"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/models.Role"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
         "/user/login": {
             "post": {
                 "description": "用户登陆",
@@ -351,7 +609,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/request.UserPageQueryForm"
+                            "$ref": "#/definitions/request.CommonPageQueryForm"
                         }
                     }
                 ],
@@ -547,6 +805,42 @@ const docTemplate = `{
                 }
             }
         },
+        "models.Mapping": {
+            "type": "object",
+            "properties": {
+                "backgroundColor": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "is_deleted": {
+                    "description": "0 删除 1 使用中 2 归档中",
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "integer"
+                }
+            }
+        },
         "models.Menu": {
             "type": "object",
             "properties": {
@@ -730,6 +1024,27 @@ const docTemplate = `{
                 }
             }
         },
+        "request.CommonPageQueryForm": {
+            "type": "object",
+            "required": [
+                "pageNo",
+                "pageSize"
+            ],
+            "properties": {
+                "pageNo": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "pageSize": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "search": {
+                    "type": "string",
+                    "example": ""
+                }
+            }
+        },
         "request.Login": {
             "type": "object",
             "required": [
@@ -744,6 +1059,37 @@ const docTemplate = `{
                 "password": {
                     "type": "string",
                     "example": "1234@Abcd"
+                }
+            }
+        },
+        "request.MappingCreate": {
+            "type": "object",
+            "required": [
+                "code",
+                "name",
+                "value"
+            ],
+            "properties": {
+                "backgroundColor": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string",
+                    "example": ""
+                },
+                "color": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string",
+                    "example": ""
+                },
+                "value": {
+                    "type": "integer",
+                    "example": 1
                 }
             }
         },
@@ -790,27 +1136,6 @@ const docTemplate = `{
                 "position_id": {
                     "type": "integer",
                     "example": 1
-                }
-            }
-        },
-        "request.UserPageQueryForm": {
-            "type": "object",
-            "required": [
-                "pageNo",
-                "pageSize"
-            ],
-            "properties": {
-                "pageNo": {
-                    "type": "integer",
-                    "example": 1
-                },
-                "pageSize": {
-                    "type": "integer",
-                    "example": 10
-                },
-                "search": {
-                    "type": "string",
-                    "example": ""
                 }
             }
         },

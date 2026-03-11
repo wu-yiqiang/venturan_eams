@@ -6,6 +6,6 @@ const (
 )
 
 const (
-	NotDeleted int = iota // 未删除
-	Deleted               // 已删除
+	NotDeleted int8 = iota // 未删除
+	Deleted    int8 = 1    // 已删除
 )

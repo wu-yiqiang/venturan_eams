@@ -57,7 +57,7 @@ func UserLogin(c *gin.Context) {
 	} else {
 		tokenData, err, _ := services.JwtService.CreateToken(services.AppGuardName, user)
 		if err != nil {
-			response.Fail(c, serviceErrors.TokentokenIssuanceFailed)
+			response.Fail(c, serviceErrors.TokenIssuanceFailed)
 			return
 		}
 		userInfo := map[string]interface{}{}
@@ -125,18 +125,17 @@ func UserLogout(c *gin.Context) {
 // @Accept  json
 // @Produce  json
 // @Router /user/page [post]
-// @Param body body request.UserPageQueryForm true "body"
+// @Param body body request.CommonPageQueryForm true "body"
 // @Success 200 {object} response.Response{data=[]models.User} "success"
 func UserPage(c *gin.Context) {
-	var userPageQueryForm request.UserPageQueryForm
-	//var paginationResult services.PaginationResult
+	var userPageQueryForm request.CommonPageQueryForm
 	if err := c.ShouldBindJSON(&userPageQueryForm); err != nil {
 		response.Fail(c, request.GetErrorMsg(userPageQueryForm, err))
 		return
 	}
 	err, paginationResult := services.UserService.UserPage(userPageQueryForm)
 	if err != nil {
-		response.Fail(c, serviceErrors.UserIsNotExistOrPasswordError)
+		response.Fail(c, serviceErrors.QueryError)
 		return
 	}
 	response.Success(c, paginationResult)

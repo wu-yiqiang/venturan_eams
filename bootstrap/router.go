@@ -59,6 +59,14 @@ func setupRouter() *gin.Engine {
 	{
 		routes.SetMenuGroupRoutes(menuGroup)
 	}
+	roleGroup := router.Group("/role")
+	{
+		routes.SetRoleGroupRoutes(roleGroup)
+	}
+	mappingGroup := router.Group("/mapping")
+	{
+		routes.SetMappingGroupRoutes(mappingGroup)
+	}
 	return router
 }
 

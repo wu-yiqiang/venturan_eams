@@ -61,6 +61,30 @@ definitions:
       updated_at:
         type: string
     type: object
+  models.Mapping:
+    properties:
+      backgroundColor:
+        type: string
+      code:
+        type: string
+      color:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      is_deleted:
+        description: 0 删除 1 使用中 2 归档中
+        type: integer
+      name:
+        type: string
+      updated_at:
+        type: string
+      value:
+        type: integer
+    type: object
   models.Menu:
     properties:
       code:
@@ -183,6 +207,21 @@ definitions:
       updated_at:
         type: string
     type: object
+  request.CommonPageQueryForm:
+    properties:
+      pageNo:
+        example: 1
+        type: integer
+      pageSize:
+        example: 10
+        type: integer
+      search:
+        example: ""
+        type: string
+    required:
+    - pageNo
+    - pageSize
+    type: object
   request.Login:
     properties:
       email:
@@ -194,6 +233,28 @@ definitions:
     required:
     - email
     - password
+    type: object
+  request.MappingCreate:
+    properties:
+      backgroundColor:
+        type: string
+      code:
+        example: ""
+        type: string
+      color:
+        type: string
+      description:
+        type: string
+      name:
+        example: ""
+        type: string
+      value:
+        example: 1
+        type: integer
+    required:
+    - code
+    - name
+    - value
     type: object
   request.Register:
     properties:
@@ -228,21 +289,6 @@ definitions:
     - email
     - name
     - password
-    type: object
-  request.UserPageQueryForm:
-    properties:
-      pageNo:
-        example: 1
-        type: integer
-      pageSize:
-        example: 10
-        type: integer
-      search:
-        example: ""
-        type: string
-    required:
-    - pageNo
-    - pageSize
     type: object
   response.Response:
     properties:
@@ -286,6 +332,134 @@ paths:
       summary: 今日菜单
       tags:
       - 热门服务
+  /mapping/create:
+    post:
+      consumes:
+      - application/json
+      description: 字典创建
+      operationId: /mapping/create
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.MappingCreate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            $ref: '#/definitions/response.Response'
+      summary: 字典创建
+      tags:
+      - 字典管理
+  /mapping/delete/{mappingId}:
+    delete:
+      consumes:
+      - application/json
+      description: 字典删除
+      operationId: /mapping/delete/{mappingId}
+      parameters:
+      - description: mappingId
+        in: path
+        name: mappingId
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            $ref: '#/definitions/response.Response'
+      summary: 字典删除
+      tags:
+      - 字典管理
+  /mapping/details/{mappingId}:
+    get:
+      consumes:
+      - application/json
+      description: 字典详情
+      operationId: /mapping/details/{mappingId}
+      parameters:
+      - description: mappingId
+        in: path
+        name: mappingId
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Mapping'
+              type: object
+      summary: 字典详情
+      tags:
+      - 字典管理
+  /mapping/page:
+    post:
+      consumes:
+      - application/json
+      description: 字典分页查询
+      operationId: /mapping/page
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.CommonPageQueryForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.Mapping'
+                  type: array
+              type: object
+      summary: 字典分页查询
+      tags:
+      - 字典管理
+  /mapping/update:
+    post:
+      consumes:
+      - application/json
+      description: 字典更新
+      operationId: /mapping/update
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.MappingCreate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Mapping'
+              type: object
+      summary: 字典更新
+      tags:
+      - 字典管理
   /menu/{id}:
     delete:
       consumes:
@@ -422,6 +596,36 @@ paths:
       summary: 出园记录
       tags:
       - 热门服务
+  /role/page:
+    post:
+      consumes:
+      - application/json
+      description: 角色分页查询
+      operationId: /role/page
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.CommonPageQueryForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.Role'
+                  type: array
+              type: object
+      summary: 角色分页查询
+      tags:
+      - 角色管理
   /user/{id}:
     delete:
       consumes:
@@ -479,7 +683,7 @@ paths:
         name: body
         required: true
         schema:
-          $ref: '#/definitions/request.UserPageQueryForm'
+          $ref: '#/definitions/request.CommonPageQueryForm'
       produces:
       - application/json
       responses:
