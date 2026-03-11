@@ -10,7 +10,7 @@ type ID struct {
 }
 
 type Name struct {
-	Name string `json:"name" Gorm:"not null;comment:字段名称"`
+	Name string `json:"name" Gorm:"not null;comment:名称"`
 }
 
 type Code struct {
@@ -36,6 +36,20 @@ type IsDeleted struct {
 
 type Description struct {
 	Description string `json:"description" gorm:"type:varchar(2500)"`
+}
+
+type SerialNumber struct {
+	SerialNumber string `json:"serialNumber" gorm:"type:varchar(20)"`
+}
+
+type Status struct {
+	Status int8 `json:"status" gorm:"index"`
+}
+
+type File struct {
+	FileName         string `json:"fileName" Gorm:"not null;comment:文件名"`
+	FilePath         string `json:"filePath" Gorm:"not null;comment:文件路径"`
+	OriginalFileName string `json:"originalFileName" Gorm:"not null;comment:源文件名"`
 }
 
 type Image struct {

@@ -17,6 +17,8 @@ type App struct {
 	RateLimitCapacity    int64  `mapstructure:"rate_limit_capacity" json:"rate_limit_capacity" yaml:"rate_limit_capacity"`
 	RateLimitQuantum     int64  `mapstructure:"rate_limit_quantum" json:"rate_limit_quantum" yaml:"rate_limit_quantum"`
 	ParkingSpaceCapacity uint16 `mapstructure:"parking_space_capacity" json:"parking_space_capacity" yaml:"parking_space_capacity"`
+	UploadFileMaxSize    int64  `mapstructure:"upload_file_max_size" json:"upload_file_max_size" yaml:"upload_file_max_size"`
+	StorageDir           string `mapstructure:"storage_dir" json:"storage_dir" yaml:"storage_dir"`
 }
 
 type Log struct {

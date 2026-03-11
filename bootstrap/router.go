@@ -32,17 +32,23 @@ func setupRouter() *gin.Engine {
 	docs.SwaggerInfo.Version = global.App.Config.Swagger.Version
 	docs.SwaggerInfo.Schemes = []string{"http", "https"}
 	router.Static("/html", "./public")
+	// 静态文件访问
+	router.Static("/assets", "./storage/assets/")
 	// 设置 swagger访问路由
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	// 前端项目静态资源
 	router.StaticFile("/", "./static/dist/index.html")
-	router.Static("/assets", "./static/dist/assets")
+	//router.Static("/assets", "./static/dist/assets")
 	router.StaticFile("/favicon.ico", "./static/dist/favicon.ico")
 	// 其他静态资源
 	router.Static("/public", "./static")
 	router.Static("/storage", "./storage/app/public")
 
 	// 注册 api 分组路由
+	generalGroup := router.Group("/general")
+	{
+		routes.SetGeneralGroupRoutes(generalGroup)
+	}
 	userGroup := router.Group("/user")
 	{
 		routes.SetUserGroupRoutes(userGroup)

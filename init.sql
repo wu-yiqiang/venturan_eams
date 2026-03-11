@@ -20,13 +20,17 @@ insert into `user_role` (`user_id`, `role_id`) values ( 1, 2);
 -- 菜单表
 insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (1, '个人中心', 'personal', '/personal',0,1,'HomeOutlined','个人中心','2024-08-08 17:23:00','2024-08-08 08:00:23',  0);
 insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (2, '系统看板', 'dashboard', '/dashboard',0,1,'AreaChartOutlined','系统看板','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
-insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (3, '系统设置', 'systems', '/systems',0,1,'SettingOutlined','系统设置','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
-insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (4, '用户管理', 'users', '/systems/users',3,1,'SettingOutlined','用户管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
-insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (5, '角色管理', 'roles', '/systems/roles',3,1,'TeamOutlined','角色管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
-insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (6, '菜单管理', 'menus', '/systems/menus',3,1,'MenuOutlined','菜单管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
-insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (7, '按钮管理', 'buttons', '/systems/buttons',3,1,'MenuUnfoldOutlined','按钮管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
-insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (8, '字典管理', 'mappings', '/systems/mappings',3,1,'SafetyOutlined','字典管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
-insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (9, '接口管理', 'connectors', '/systems/connectors',3,1,'SafetyOutlined','接口管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (3, '商品管理', 'commodities', '/commodities',0,1,'SafetyOutlined','商品管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (4, '商品列表', 'commodityLists', '/commodities/lists',3,1,'SafetyOutlined','商品列表','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (5, '订单管理', 'orders', '/orders',0,1,'SafetyOutlined','订单管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (6, '订单列表', 'orderLists', '/orders/lists',5,1,'SafetyOutlined','订单列表','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (7, '系统设置', 'systems', '/systems',0,1,'SettingOutlined','系统设置','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (8, '用户管理', 'users', '/systems/users',7,1,'SettingOutlined','用户管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (9, '角色管理', 'roles', '/systems/roles',7,1,'TeamOutlined','角色管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (10, '菜单管理', 'menus', '/systems/menus',7,1,'MenuOutlined','菜单管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (11, '按钮管理', 'buttons', '/systems/buttons',7,1,'MenuUnfoldOutlined','按钮管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (12, '字典管理', 'mappings', '/systems/mappings',7,1,'SafetyOutlined','字典管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `menus` (`id`, `name`, `code`,`path`, `parent_menu_id`, `menu_status`, `icon_name`,`description`,`created_at`, `updated_at`, `is_deleted`) values (13, '接口管理', 'connectors', '/systems/connectors',7,1,'SafetyOutlined','接口管理','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 
 -- 角色菜单表
 -- insert into `role_menu` (`id`, `role_id`, `menu_id`,`created_at`, `updated_at`, `is_deleted`) values (1, 1, 1, '2024-08-08 17:23:00','2024-08-08 08:00:23',  0);
@@ -41,6 +45,10 @@ insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 6);
 insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 7);
 insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 8);
 insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 9);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 10);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 11);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 12);
+insert into `role_menu` (`role_id`, `menu_id`) values ( 1, 13);
 -- 按钮表
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (1, '添加用户', 'system:user:create', '添加用户','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (2, '添加角色', 'system:role:create', '添加角色','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
@@ -176,7 +184,12 @@ values (1, 'status', 0,'禁用', '','','禁用','2024-08-08 17:24:00', '2024-08-
 
 
 
+-- 商品表
 
+
+
+
+-- 订单表
 
 
 

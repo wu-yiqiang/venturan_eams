@@ -23,4 +23,7 @@ var (
 	ValueIsNotEmpty     = response.Response{1010016, nil, "值不能为空"}
 	QueryDetailsError   = response.Response{1010017, nil, "查询详情失败"}
 	IdIsNotEmpty        = response.Response{1010018, nil, "ID不能为空"}
+	FileIsNotEmpty      = response.Response{1010019, nil, "文件不能为空"}
+	FileIsTooLarge      = response.Response{1010020, nil, "文件过大"}
+	FileSaveFailed      = response.Response{1010021, nil, "文件保存失败"}
 )
