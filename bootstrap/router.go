@@ -73,6 +73,10 @@ func setupRouter() *gin.Engine {
 	{
 		routes.SetMappingGroupRoutes(mappingGroup)
 	}
+	commodityGroup := router.Group("/commodity")
+	{
+		routes.SetCommodityGroupRoutes(commodityGroup)
+	}
 	return router
 }
 

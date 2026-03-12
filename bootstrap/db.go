@@ -66,6 +66,7 @@ func initMySqlTables(db *gorm.DB) {
 		models.Button{},
 		models.Connector{},
 		models.Mapping{},
+		models.Commodity{},
 		models.Department{},
 		models.Position{},
 		models.CookBook{},

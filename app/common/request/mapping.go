@@ -32,3 +32,13 @@ func (mappingUpdate MappingUpdate) GetMessages() ValidatorMessages {
 		"value.required": serviceErrors.ValueIsNotEmpty,
 	}
 }
+
+type MappingType struct {
+	Code string `form:"code" json:"code" example:"" binding:"required"`
+}
+
+func (mappingType MappingType) GetMessages() ValidatorMessages {
+	return ValidatorMessages{
+		"code.required": serviceErrors.MappingTypeIsNotEmpty,
+	}
+}

@@ -5,7 +5,7 @@ insert into `users` (`id`, `name`, `nick_name`, `email`,`password`, `avatar`, `m
 values ('1', 'Sutter Wu', 'sutter', 'sutter.wu@itforce-tech.com', '$2a$04$toEgtXNyEIVIcsBD8RJkEONlfBU37l65pTwjcLsfuOgNvZp4tbd4C','https://youke1.picui.cn/s1/2025/10/25/68fc6b8106bed.jpeg', '18862857104', '2024-08-08', '2024-12-10',1,
         1,'啦啦啦', '2024-08-08', '2024-08-08', 0);
 insert into `users` (`id`, `name`, `nick_name`, `email`,`password`, `avatar`, `mobile`, `employ_date`,`resign_date`, `department_id`,`position_id`,
-                        `description`,`created_at`, `updated_at`, `is_deleted`)
+                     `description`,`created_at`, `updated_at`, `is_deleted`)
 values ('2', 'sutter2', 'sutter2', 'sutter2.wu@itforce-tech.com', '$2a$04$toEgtXNyEIVIcsBD8RJkEONlfBU37l65pTwjcLsfuOgNvZp4tbd4C','https://youke1.picui.cn/s1/2025/10/25/68fc6b8106bed.jpeg', '18862857104', '2024-08-08', '2024-08-10',1,
         1, '666','2024-08-08', '2024-08-08', 0);
 
@@ -68,6 +68,9 @@ insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (16, '删除按钮', 'system:button:delete', '删除按钮','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (17, '删除字典', 'system:mapping:delete', '删除字典','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (18, '删除接口', 'system:connector:delete', '删除接口','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (19, '创建商品', 'commodities:commodity:create', '创建商品','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (20, '编辑商品', 'commodities:commodity:edit', '编辑商品','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
+insert into `buttons` (`id`, `name`, `code`,`description`,`created_at`, `updated_at`, `is_deleted`) values (21, '删除商品', 'commodities:commodity:delete', '删除商品','2024-08-08 17:24:00','2024-08-08 08:55:23',  0);
 
 -- 角色按钮表
 insert into `role_button` (`role_id`, `button_id`) values ( 1, 1);
@@ -88,7 +91,9 @@ insert into `role_button` (`role_id`, `button_id`) values ( 1, 15);
 insert into `role_button` (`role_id`, `button_id`) values ( 1, 16);
 insert into `role_button` (`role_id`, `button_id`) values ( 1, 17);
 insert into `role_button` (`role_id`, `button_id`) values ( 1, 18);
-
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 19);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 20);
+insert into `role_button` (`role_id`, `button_id`) values ( 1, 21);
 -- 接口表
 insert into `connectors` (`id`, `name`, `method`, `path`,`description`, `created_at`, `updated_at`,  `is_deleted`)
 values (1, '查询用户列表', 1, '/user/page','查询用户列表','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
@@ -172,22 +177,36 @@ insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 37);
 insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 38);
 -- 字典表
 insert into `mappings` (`id`, `code`,`value`,  `name`,   `color`, `background_color`,`description`, `created_at`, `updated_at`,  `is_deleted`)
-values (1, 'status', 0,'禁用', '','','禁用','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
-       (2, 'status', 1, '启用','','', '启用','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
-       (3, 'menuType',1, '目录','','', '目录', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
-       (4, 'menuType',2, '菜单','','', '菜单','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
-       (5, 'connectorType',1,'GET','','', 'GET','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
-       (6, 'connectorType',2,'POST','','', 'POST', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
-       (7, 'connectorType',3,'DELETE','','', 'DELETE','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
-       (8, 'connectorType',4,'PUT','','', 'PUT','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0);
+values (1, 'Status', 0,'禁用', '','','禁用','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (2, 'Status', 1, '启用','','', '启用','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (3, 'MenuType',1, '目录','','', '目录', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (4, 'MenuType',2, '菜单','','', '菜单','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (5, 'ConnectorType',1,'GET','','', 'GET','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (6, 'ConnectorType',2,'POST','','', 'POST', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),
+       (7, 'ConnectorType',3,'DELETE','','', 'DELETE','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (8, 'ConnectorType',4,'PUT','','', 'PUT','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (9, 'CommodityStatus',0,'未上架','','', '未上架','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (10, 'CommodityStatus',1,'在售','','', '在售','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (11, 'CommodityStatus',2,'下架','','', '下架','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (12, 'CommodityStatus',3,'售罄','','', '售罄','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0);
 
 
 
 
 -- 商品表
-
-
-
+insert into `commodities` (`id`, `code`,`name`,  `price`,   `sales`, `inventory`,`file_name`, `status`,`description`, `created_at`, `updated_at`,  `is_deleted`)
+values (1, '6946601', '惠普显示器', 206700, 1,10,'1_small_1773295702191045500_ed59ba68.png', 0,'惠普显示器','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (2, '6946602', '惠普一体机', 899900, 45, 44,'1_small_1773295702191045500_ed59ba68.png', 0,'惠普一体机','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (3, '6946603', 'AirPod',    166700, 12, 89,'1_small_1773295702191045500_ed59ba68.png', 0,'AirPod','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (4, '6946604', 'MacBook Neo', 249900, 21, 78,'1_small_1773295702191045500_ed59ba68.png', 0,'MacBook Neo','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (5, '6946605', '惠普服务器', 30467800, 34, 98,'1_small_1773295702191045500_ed59ba68.png', 0,'惠普服务器','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (6, '6946606', '英伟达GTX5090', 944400, 30, 34,'1_small_1773295702191045500_ed59ba68.png', 0,'英伟达GTX5090','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (7, '6946607', 'iphone 17', 519900, 98, 124,'1_small_1773295702191045500_ed59ba68.png', 0,'iphone 17','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (8, '6946608', '联想笔记本 thinkbook14+', 599900, 123, 220,'1_small_1773295702191045500_ed59ba68.png', 0,'联想笔记本 thinkbook14+','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (9, '6946609', '联想笔记本 thinkbook16+', 799900, 223, 324,'1_small_1773295702191045500_ed59ba68.png', 0,'联想笔记本 thinkbook16+','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (10, '6946610', '西部数据 WD40', 96700, 54, 678,'1_small_1773295702191045500_ed59ba68.png', 0,'西部数据 WD40','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (11, '6946611', '希捷移动硬盘ST8000NM17B', 137800, 77, 896,'1_small_1773295702191045500_ed59ba68.png', 0,'希捷移动硬盘ST8000NM17B','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
+       (12, '6946612', 'IBM工作站 A Pro', 30673200, 66, 443,'1_small_1773295702191045500_ed59ba68.png', 0,'IBM工作站 A Pro','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0);
 
 -- 订单表
 

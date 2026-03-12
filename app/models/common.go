@@ -46,10 +46,8 @@ type Status struct {
 	Status int8 `json:"status" gorm:"index"`
 }
 
-type File struct {
-	FileName         string `json:"fileName" Gorm:"not null;comment:文件名"`
-	FilePath         string `json:"filePath" Gorm:"not null;comment:文件路径"`
-	OriginalFileName string `json:"originalFileName" Gorm:"not null;comment:源文件名"`
+type FileName struct {
+	FileName string `json:"fileName" Gorm:"not null;comment:文件名"`
 }
 
 type Image struct {

@@ -14,6 +14,7 @@ func SetMappingGroupRoutes(router *gin.RouterGroup) {
 	{
 		authRouter.POST("/page", controllers.MappingPage)
 		authRouter.POST("/lists", controllers.MappingList)
+		authRouter.POST("/types", controllers.MappingTypes)
 		authRouter.POST("/create", controllers.MappingCreate)
 		authRouter.GET("/details/:mapping_id", controllers.MappingDetails)
 		authRouter.POST("/update", controllers.MappingUpdate)

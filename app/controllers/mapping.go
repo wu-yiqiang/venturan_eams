@@ -123,4 +123,28 @@ func MappingDelete(c *gin.Context) {
 	}
 	response.Success(c, nil)
 }
+
+// @Summary 字典类型查询
+// @Description 字典类型查询
+// @Tags 字典管理
+// @ID /mapping/types
+// @Accept  json
+// @Produce  json
+// @Router /mapping/types [post]
+// @Param body body request.MappingType true "body"
+// @Success 200 {object} response.Response{data=[]models.Mapping} "success"
+func MappingTypes(c *gin.Context) {
+	var mappingForm request.MappingType
+	if err := c.ShouldBindJSON(&mappingForm); err != nil {
+		response.Fail(c, request.GetErrorMsg(mappingForm, err))
+		return
+	}
+	err, mappings := services.MappingService.MappingTypeList(mappingForm)
+	if err != nil {
+		response.Fail(c, serviceErrors.QueryError)
+		return
+	}
+	response.Success(c, mappings)
+}
+
 func MappingList(c *gin.Context) {}

@@ -21,6 +21,34 @@ definitions:
       updated_at:
         type: string
     type: object
+  models.Commodity:
+    properties:
+      code:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      fileName:
+        type: string
+      id:
+        type: integer
+      inventory:
+        type: integer
+      is_deleted:
+        description: 0 删除 1 使用中 2 归档中
+        type: integer
+      name:
+        type: string
+      price:
+        type: integer
+      sales:
+        type: integer
+      status:
+        type: integer
+      updated_at:
+        type: string
+    type: object
   models.Connector:
     properties:
       created_at:
@@ -256,6 +284,14 @@ definitions:
     - name
     - value
     type: object
+  request.MappingType:
+    properties:
+      code:
+        example: ""
+        type: string
+    required:
+    - code
+    type: object
   request.Register:
     properties:
       avatar:
@@ -311,6 +347,134 @@ info:
   title: 基于Golang Gin框架的EAMS系统
   version: "1.0"
 paths:
+  /commodity/create:
+    post:
+      consumes:
+      - application/json
+      description: 添加商品
+      operationId: /commodity/create
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.MappingCreate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            $ref: '#/definitions/response.Response'
+      summary: 添加商品
+      tags:
+      - 商品管理
+  /commodity/delete/{commodityId}:
+    delete:
+      consumes:
+      - application/json
+      description: 删除商品
+      operationId: /commodity/delete/{commodityId}
+      parameters:
+      - description: commodityId
+        in: path
+        name: commodityId
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            $ref: '#/definitions/response.Response'
+      summary: 删除商品
+      tags:
+      - 商品管理
+  /commodity/details/{commodityId}:
+    get:
+      consumes:
+      - application/json
+      description: 商品详情
+      operationId: /commodity/details/{commodityId}
+      parameters:
+      - description: commodityId
+        in: path
+        name: commodityId
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Commodity'
+              type: object
+      summary: 商品详情
+      tags:
+      - 商品管理
+  /commodity/page:
+    post:
+      consumes:
+      - application/json
+      description: 商品分页查询
+      operationId: /commodity/page
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.CommonPageQueryForm'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.Commodity'
+                  type: array
+              type: object
+      summary: 商品分页查询
+      tags:
+      - 商品管理
+  /commodity/update:
+    post:
+      consumes:
+      - application/json
+      description: 更新商品
+      operationId: /commodity/update
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.MappingCreate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.Commodity'
+              type: object
+      summary: 更新商品
+      tags:
+      - 商品管理
   /cookbook/menus:
     post:
       consumes:
@@ -332,6 +496,18 @@ paths:
       summary: 今日菜单
       tags:
       - 热门服务
+  /general/upload:
+    post:
+      consumes:
+      - application/json
+      description: 文件上传
+      operationId: /general/upload
+      produces:
+      - application/json
+      responses: {}
+      summary: 文件上传
+      tags:
+      - 公共服务
   /mapping/create:
     post:
       consumes:
@@ -430,6 +606,36 @@ paths:
                   type: array
               type: object
       summary: 字典分页查询
+      tags:
+      - 字典管理
+  /mapping/types:
+    post:
+      consumes:
+      - application/json
+      description: 字典类型查询
+      operationId: /mapping/types
+      parameters:
+      - description: body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.MappingType'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: success
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.Mapping'
+                  type: array
+              type: object
+      summary: 字典类型查询
       tags:
       - 字典管理
   /mapping/update:

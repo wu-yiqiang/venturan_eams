@@ -23,6 +23,14 @@ func (mappingService *mappingService) MappingPage(params request.CommonPageQuery
 	return nil, rolePageResults
 }
 
+func (mappingService *mappingService) MappingTypeList(params request.MappingType) (err error, mappings []models.Mapping) {
+	err = global.App.DB.Scopes(QueryIsNoeDeleted).Where("code = ?", params.Code).Find(&mappings).Error
+	if err != nil {
+		return
+	}
+	return nil, mappings
+}
+
 func (mappingService *mappingService) MappingCreate(params request.MappingCreate) (err error) {
 	mapping := models.Mapping{Name: models.Name{Name: params.Name}, Code: models.Code{Code: params.Code}, Value: params.Value, Color: params.Color, BackgroundColor: params.BackgroundColor, Description: models.Description{Description: params.Description}}
 	result := global.App.DB.Create(&mapping)
