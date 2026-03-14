@@ -14,7 +14,7 @@ type Name struct {
 }
 
 type Code struct {
-	Code string `json:"code" Gorm:"not null;comment:唯一编码"`
+	Code string `json:"code" Gorm:"unique;not null;comment:唯一编码;"`
 }
 
 // 创建、更新时间

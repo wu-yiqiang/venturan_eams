@@ -176,7 +176,7 @@ insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 36);
 insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 37);
 insert into `role_connector` (`role_id`, `connector_id`) values ( 1, 38);
 -- 字典表
-insert into `mappings` (`id`, `code`,`value`,  `name`,   `color`, `background_color`,`description`, `created_at`, `updated_at`,  `is_deleted`)
+insert into `mappings` (`id`, `mapping_type`,`mapping_value`,  `name`,   `color`, `background_color`,`description`, `created_at`, `updated_at`,  `is_deleted`)
 values (1, 'Status', 0,'禁用', '','','禁用','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
        (2, 'Status', 1, '启用','','', '启用','2024-08-08 17:24:00', '2024-08-08 17:24:00',  0),
        (3, 'MenuType',1, '目录','','', '目录', '2024-08-08 17:24:00', '2024-08-08 17:24:00', 0),

@@ -15,6 +15,7 @@ func SetCommodityGroupRoutes(router *gin.RouterGroup) {
 		authRouter.POST("/page", controllers.CommodityPage)
 		authRouter.POST("/create", controllers.CommodityCreate)
 		authRouter.GET("/details/:commodity_id", controllers.CommodityDetails)
+		authRouter.POST("/up", controllers.CommodityUpdateStatus)
 		authRouter.POST("/update", controllers.CommodityUpdate)
 		authRouter.DELETE("/delete/:commodity_id", controllers.CommodityDelete)
 	}

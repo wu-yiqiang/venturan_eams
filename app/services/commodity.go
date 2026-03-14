@@ -50,6 +50,15 @@ func (commodityService *commodityService) CommodityUpdate(params request.Commodi
 	return nil
 }
 
+func (commodityService *commodityService) CommodityUp(params request.CommodityUp) (err error) {
+	result := global.App.DB.Model(&models.Commodity{}).Where("id = ?", params.ID).Update("status", params.Status)
+	if result.Error != nil {
+		fmt.Println("result.Errorresult.Error", result.Error)
+		return result.Error
+	}
+	return nil
+}
+
 func (commodityService *commodityService) CommodityDelete(commodityId string) (err error) {
 	result := global.App.DB.Model(&models.Commodity{}).Where("id = ?", commodityId).Update("is_deleted", common.Deleted)
 	if result.Error != nil {

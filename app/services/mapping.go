@@ -15,7 +15,7 @@ var MappingService = new(mappingService)
 
 func (mappingService *mappingService) MappingPage(params request.CommonPageQueryForm) (err error, results *PaginationResult) {
 	var mappings []models.Mapping
-	query := global.App.DB.Scopes(QueryIsNoeDeleted).Where("name LIKE ? OR code LIKE ? OR description LIKE ?", "%"+params.Search+"%", "%"+params.Search+"%", "%"+params.Search+"%").Find(&mappings)
+	query := global.App.DB.Scopes(QueryIsNoeDeleted).Where("name LIKE ? OR mapping_type LIKE ? OR description LIKE ?", "%"+params.Search+"%", "%"+params.Search+"%", "%"+params.Search+"%").Find(&mappings)
 	rolePageResults, err := Pagination(query, params.PageNo, params.PageSize, &mappings)
 	if err != nil {
 		return
@@ -24,7 +24,7 @@ func (mappingService *mappingService) MappingPage(params request.CommonPageQuery
 }
 
 func (mappingService *mappingService) MappingTypeList(params request.MappingType) (err error, mappings []models.Mapping) {
-	err = global.App.DB.Scopes(QueryIsNoeDeleted).Where("code = ?", params.Code).Find(&mappings).Error
+	err = global.App.DB.Scopes(QueryIsNoeDeleted).Where("mapping_type = ?", params.MappingType).Find(&mappings).Error
 	if err != nil {
 		return
 	}
@@ -32,7 +32,7 @@ func (mappingService *mappingService) MappingTypeList(params request.MappingType
 }
 
 func (mappingService *mappingService) MappingCreate(params request.MappingCreate) (err error) {
-	mapping := models.Mapping{Name: models.Name{Name: params.Name}, Code: models.Code{Code: params.Code}, Value: params.Value, Color: params.Color, BackgroundColor: params.BackgroundColor, Description: models.Description{Description: params.Description}}
+	mapping := models.Mapping{Name: models.Name{Name: params.Name}, MappingType: params.MappingType, MappingValue: params.MappingValue, Color: params.Color, BackgroundColor: params.BackgroundColor, Description: models.Description{Description: params.Description}}
 	result := global.App.DB.Create(&mapping)
 	if result.Error != nil {
 		fmt.Println(result.Error)
@@ -50,7 +50,7 @@ func (mappingService *mappingService) MappingQueryDetails(mappingId string) (err
 }
 
 func (mappingService *mappingService) MappingUpdate(params request.MappingUpdate) (err error) {
-	mapping := models.Mapping{Name: models.Name{Name: params.Name}, Code: models.Code{Code: params.Code}, Description: models.Description{Description: params.Description}, Color: params.Color, BackgroundColor: params.BackgroundColor}
+	mapping := models.Mapping{Name: models.Name{Name: params.Name}, MappingType: params.MappingType, Description: models.Description{Description: params.Description}, Color: params.Color, BackgroundColor: params.BackgroundColor}
 	result := global.App.DB.Where("id = ?", params.ID).Updates(&mapping)
 	if result.Error != nil {
 		return result.Error

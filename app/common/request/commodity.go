@@ -34,3 +34,15 @@ func (commodityUpdate CommodityUpdate) GetMessages() ValidatorMessages {
 		"value.required": serviceErrors.ValueIsNotEmpty,
 	}
 }
+
+type CommodityUp struct {
+	ID     uint `json:"id" binding:"required"`
+	Status int8 `json:"status" gorm:"index" binding:"required"`
+}
+
+func (commodityUp CommodityUp) GetMessages() ValidatorMessages {
+	return ValidatorMessages{
+		"id.required":     serviceErrors.IdIsNotEmpty,
+		"status.required": serviceErrors.CommodityStatusIsNotEmpty,
+	}
+}

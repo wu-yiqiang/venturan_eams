@@ -3,9 +3,9 @@ package request
 import "venturan/global/serviceErrors"
 
 type MappingCreate struct {
-	Code            string `form:"code" json:"code" example:"" binding:"required"`
+	MappingType     string `form:"mappingType" json:"mappingType" example:"" binding:"required"`
 	Name            string `form:"name" json:"name"  example:"" binding:"required"`
-	Value           uint   `form:"value" json:"value"  example:"1" binding:"required"`
+	MappingValue    uint   `form:"mappingValue" json:"mappingValue"  example:"1" binding:"required"`
 	Color           string `json:"color" Gorm:"comment:文本颜色"`
 	BackgroundColor string `json:"backgroundColor" Gorm:"comment:背景颜色"`
 	Description     string `json:"description" gorm:"type:varchar(2500)"`
@@ -13,9 +13,9 @@ type MappingCreate struct {
 
 func (mappingCreate MappingCreate) GetMessages() ValidatorMessages {
 	return ValidatorMessages{
-		"code.required":  serviceErrors.CodeIsNotEmpty,
-		"name.required":  serviceErrors.NameIsNotEmpty,
-		"value.required": serviceErrors.ValueIsNotEmpty,
+		"mappingType.required":  serviceErrors.CodeIsNotEmpty,
+		"name.required":         serviceErrors.NameIsNotEmpty,
+		"mappingValue.required": serviceErrors.ValueIsNotEmpty,
 	}
 }
 
@@ -26,19 +26,19 @@ type MappingUpdate struct {
 
 func (mappingUpdate MappingUpdate) GetMessages() ValidatorMessages {
 	return ValidatorMessages{
-		"id.required":    serviceErrors.IdIsNotEmpty,
-		"code.required":  serviceErrors.CodeIsNotEmpty,
-		"name.required":  serviceErrors.NameIsNotEmpty,
-		"value.required": serviceErrors.ValueIsNotEmpty,
+		"id.required":           serviceErrors.IdIsNotEmpty,
+		"mappingType.required":  serviceErrors.CodeIsNotEmpty,
+		"name.required":         serviceErrors.NameIsNotEmpty,
+		"mappingValue.required": serviceErrors.ValueIsNotEmpty,
 	}
 }
 
 type MappingType struct {
-	Code string `form:"code" json:"code" example:"" binding:"required"`
+	MappingType string `form:"mappingType" json:"mappingType" example:"" binding:"required"`
 }
 
 func (mappingType MappingType) GetMessages() ValidatorMessages {
 	return ValidatorMessages{
-		"code.required": serviceErrors.MappingTypeIsNotEmpty,
+		"mappingType.required": serviceErrors.MappingTypeIsNotEmpty,
 	}
 }

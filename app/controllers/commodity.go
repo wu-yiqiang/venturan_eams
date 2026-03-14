@@ -101,6 +101,29 @@ func CommodityUpdate(c *gin.Context) {
 	response.Success(c, nil)
 }
 
+// @Summary 商品上架
+// @Description 商品上架
+// @Tags 商品管理
+// @ID /commodity/up
+// @Accept  json
+// @Produce  json
+// @Router /commodity/up [post]
+// @Param body body request.MappingCreate true "body"
+// @Success 200 {object} response.Response{data=models.Commodity} "success"
+func CommodityUpdateStatus(c *gin.Context) {
+	var commodityForm request.CommodityUp
+	if err := c.ShouldBindJSON(&commodityForm); err != nil {
+		response.Fail(c, request.GetErrorMsg(commodityForm, err))
+		return
+	}
+	err := services.CommodityService.CommodityUp(commodityForm)
+	if err != nil {
+		response.Fail(c, serviceErrors.UpdateError)
+		return
+	}
+	response.Success(c, nil)
+}
+
 // @Summary 删除商品
 // @Description 删除商品
 // @Tags 商品管理
